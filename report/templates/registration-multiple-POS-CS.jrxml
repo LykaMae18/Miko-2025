@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="registration-POS-CS-NEW" pageWidth="828" pageHeight="595" orientation="Landscape" columnWidth="788" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<property name="ireport.zoom" value="1.2100000000000009"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CURRENT_DATE" class="java.lang.String"/>
+	<parameter name="TRANS_NO" class="java.lang.String"/>
+	<parameter name="APP_STATUS" class="java.lang.String"/>
+	<parameter name="PERMIT_TYPE" class="java.lang.String"/>
+	<parameter name="BUSINESS_TIN" class="java.lang.String"/>
+	<parameter name="BRANCH_CD" class="java.lang.String"/>
+	<parameter name="RDO_CD" class="java.lang.String"/>
+	<parameter name="BUSINESS_TYPE" class="java.lang.String"/>
+	<parameter name="BUSINESS_ADDRESS" class="java.lang.String"/>
+	<parameter name="FIRST_NAME" class="java.lang.String"/>
+	<parameter name="MIDDLE_NAME" class="java.lang.String"/>
+	<parameter name="LAST_NAME" class="java.lang.String"/>
+	<parameter name="REG_NAME" class="java.lang.String"/>
+	<parameter name="parameter5" class="java.lang.String"/>
+	<parameter name="parameter1" class="java.lang.String"/>
+	<parameter name="EXTENTION_NAME" class="java.lang.String"/>
+	<parameter name="parameter2" class="java.lang.String"/>
+	<parameter name="MACHINE_SIZE" class="java.lang.String"/>
+	<parameter name="parameter3" class="java.lang.String"/>
+	<parameter name="parameter6" class="java.lang.String"/>
+	<parameter name="ACCRED_NO" class="java.lang.String"/>
+	<parameter name="BUSINESS_STATIC" class="java.lang.String"/>
+	<parameter name="BUSINESS_NAME" class="java.lang.String"/>
+	<parameter name="SOFTWARE_NAME_STATIC" class="java.lang.String"/>
+	<parameter name="SOFTWARE_VERSION_STATIC" class="java.lang.String"/>
+	<parameter name="SOFTWARE_NAME" class="java.lang.String"/>
+	<parameter name="SOFTWARE_VERSION" class="java.lang.String"/>
+	<parameter name="MACHINE_TYPE" class="java.lang.String"/>
+	<parameter name="SOFTWARE_DETAILS" class="java.lang.String"/>
+	<parameter name="USER_NAME" class="java.lang.String"/>
+	<field name="serialNumber" class="java.lang.String"/>
+	<field name="brand" class="java.lang.String"/>
+	<field name="model" class="java.lang.String"/>
+	<field name="presentReading" class="java.lang.String"/>
+	<field name="dateOfReading" class="java.lang.String"/>
+	<field name="lastOR" class="java.lang.String"/>
+	<field name="lastCashInvoice" class="java.lang.String"/>
+	<field name="lastChargeInvoice" class="java.lang.String"/>
+	<field name="lastTransaction" class="java.lang.String"/>
+	<field name="roving" class="java.lang.String"/>
+	<field name="terminalOrServer" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="439" splitType="Stretch">
+			<image>
+				<reportElement  x="166" y="0" width="858" height="439"/>
+				<imageExpression><![CDATA["images/Picture1.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement  x="56" y="10" width="144" height="84"/>
+				<imageExpression><![CDATA["images/Picture2.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement  x="200" y="191" width="390" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BUSINESS_TIN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="200" y="344" width="389" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{MACHINE_SIZE}.equals("1"))?
+$P{SOFTWARE_VERSION}:""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="191" width="136" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Business TIN:]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="0" y="343" width="136" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{MACHINE_SIZE}.equals("1"))?
+"Software Version":""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="229" width="136" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[RDO Code:]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="200" y="229" width="390" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RDO_CD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="200" y="210" width="390" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BRANCH_CD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="200" y="267" width="390" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{BUSINESS_TYPE}.equals("Individual"))?
+$P{FIRST_NAME}+' '+
+$P{MIDDLE_NAME}+' '+
+$P{LAST_NAME}+' '+
+$P{EXTENTION_NAME}
+:$P{REG_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="0" y="267" width="136" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{BUSINESS_TYPE}.equals("Individual"))?
+"Owner Name :":"Registered Name :"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="115" width="100" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Transaction Number:]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="0" y="362" width="136" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{PERMIT_TYPE}.equals("Final Permit") &&
+($P{MACHINE_SIZE}.equals("1")))?
+"Accreditation Number":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="200" y="325" width="388" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{MACHINE_SIZE}.equals("1"))?
+$P{SOFTWARE_NAME}:""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="200" y="248" width="390" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{BUSINESS_TYPE}.equals("Non - Individual"))?
+$P{BUSINESS_NAME}:""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="210" width="136" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Branch Code:]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="200" y="134" width="149" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{APP_STATUS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="400" width="136" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Type of Machine : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="172" width="136" height="20"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUSINESS DETAILS]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="0" y="324" width="136" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{MACHINE_SIZE}.equals("1"))?
+"Software Name":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="200" y="115" width="149" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TRANS_NO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="200" y="363" width="389" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{PERMIT_TYPE}.equals("Final Permit") &&
+($P{MACHINE_SIZE}.equals("1")))?
+$P{ACCRED_NO}:""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="0" y="248" width="136" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{BUSINESS_TYPE}.equals("Non - Individual"))?
+"Business Name :":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="0" y="305" width="146" height="20"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{PERMIT_TYPE}.equals("Provisional Permit") &&
+($P{MACHINE_SIZE}.equals("1")))?
+"SOFTWARE_DETAILS":""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="153" width="100" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Type of Permit:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="419" width="136" height="20"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TERMINAL DETAILS]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="200" y="400" width="282" height="30"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MACHINE_TYPE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="0" y="305" width="136" height="20"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{PERMIT_TYPE}.equals("Final Permit") &&
+($P{MACHINE_SIZE}.equals("1")))?
+"ACCREDITATION DETAILS":""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="286" width="136" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Registered Address:]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="200" y="153" width="149" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PERMIT_TYPE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  x="200" y="286" width="432" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BUSINESS_ADDRESS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="381" width="136" height="20"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MACHINE DETAILS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="134" width="100" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Application Status:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="45" width="782" height="17"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUREAU OF INTERNAL REVENUE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="80" width="782" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Application for Registration of Sales Machines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="29" width="782" height="17"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT OF FINANCE]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="707" y="61" width="75" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CURRENT_DATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="632" y="61" width="75" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Date Generated:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="10" width="782" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[REPUBLIC OF THE PHILIPPINES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement  mode="Opaque" x="0" y="5" width="61" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Server/
+Terminal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="61" y="5" width="119" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Serial Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="180" y="5" width="75" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Brand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="255" y="5" width="75" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Model]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="330" y="5" width="50" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Present
+Reading]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="380" y="5" width="63" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of
+Reading]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="442" y="5" width="75" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Last OR
+Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="517" y="5" width="75" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Last Cash
+Invoice Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="592" y="5" width="75" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Last Charge
+Invoice Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="667" y="5" width="80" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Last Transaction
+Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="747" y="5" width="35" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Roving]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="0" y="0" width="61" height="30" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{terminalOrServer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="61" y="0" width="119" height="30" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{serialNumber}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="180" y="0" width="75" height="30" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{brand}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="255" y="0" width="75" height="30" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{model}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="330" y="0" width="50" height="30" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{presentReading}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="380" y="0" width="62" height="30" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateOfReading}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="442" y="0" width="75" height="30" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastOR}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="517" y="0" width="75" height="30" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastCashInvoice}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="592" y="0" width="75" height="30" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastChargeInvoice}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="667" y="0" width="80" height="30" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastTransaction}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="747" y="0" width="35" height="30" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{roving}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement  x="690" y="5" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{USER_NAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="590" y="5" width="100" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Printed by :]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

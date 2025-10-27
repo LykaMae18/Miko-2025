@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.indracompany.bir.acrsal</groupId>
+    <artifactId>acrsal-parent</artifactId>
+    <version>1.6.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.indracompany.bir.acrsal</groupId>
+  <artifactId>acrsal-api</artifactId>
+  <packaging>jar</packaging>
+
+  <name>eAccReg and eSales Services</name>
+  <description>All Service Interface and Implementation are in this project</description>
+
+  <scm>
+    <connection>scm:svn:https://svn.indracompany.com.ph/repos/BIR/ACRSAL/core/trunk/acrsal-api</connection>
+    <developerConnection>scm:svn:https://svn.indracompany.com.ph/repos/BIR/ACRSAL/core/trunk/acrsal-api</developerConnection>
+    <url>https://svn.indracompany.com.ph/repos/BIR/ACRSAL/core/trunk/acrsal-api</url>
+  </scm>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>com.indracompany.bir.acrsal</groupId>
+      <artifactId>acrsal-dao</artifactId>
+    </dependency>
+
+
+      <dependency>
+          <groupId>opensymphony</groupId>
+          <artifactId>quartz</artifactId>
+          <version>1.6.3</version>
+      </dependency>
+      ``
+
+
+  </dependencies>
+
+</project>

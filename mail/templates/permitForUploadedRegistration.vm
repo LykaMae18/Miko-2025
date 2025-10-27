@@ -1,0 +1,42 @@
+Application for Registration/Permit to Use-New
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Application for Registration/Permit to Use</title>
+  </head>
+  <body>
+  	<p>
+  		Hi Mr./Ms. <b>$authorizedName</b>,
+  		
+  		<br> <br>
+  		
+    	
+  		Your application for Permit to Use Sales Machine / Special Purpose Machine (whichever is applicable) in behalf of $taxpayerName with transaction number 
+  		 <b> $transNum </b> has been forwarded to the  RDO responsible for processing . 		  
+    	
+    	<br> <br>
+    	
+    	You will be notified of the status of your application via e-mail or you may choose to login to
+    	your account for monitoring of such status.
+    	    	
+    	<br> <br>
+    	Thank you.
+    	
+		<br> <br>
+		For more information on Application for Registration of Permit to Use, please refer to the Help
+		Files menu of the BIR eAccreg website or contact one of the following: <br>
+	
+		<br> <br>
+		your respective Revenue District Office (RDO), Large Taxpayer District Office (LTDO), Large Taxpayers Assistance Division (LTAD), or Large Taxpayer - Excise Tax Regulatory Division (LT-ETRD): http://www.bir.gov.ph/directory/rdo.htm, 
+		<br>or you may also reach BIR at http://www.bir.gov.ph/, 
+		<br>or thru our Customer Assistance Division (CAD) at Telephone No: 981-8888, 
+		<br>or e-mail at contact_us@cctr.bir.gov.ph		
+		<br> <br>
+
+		<br> <br>
+		Thank you.
+    </p>
+  </body>
+</html>
+

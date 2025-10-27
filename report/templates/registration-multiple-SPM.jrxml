@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="registration-CRM-New" pageWidth="828" pageHeight="595" orientation="Landscape" columnWidth="788" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<property name="ireport.zoom" value="1.100000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="9"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#7500E2">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#F3E6FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" />
+	<parameter name="CURRENT_DATE" class="java.lang.String"/>
+	<parameter name="TRANS_NO" class="java.lang.String"/>
+	<parameter name="APP_STATUS" class="java.lang.String"/>
+	<parameter name="PERMIT_TYPE" class="java.lang.String"/>
+	<parameter name="BUSINESS_TIN" class="java.lang.String"/>
+	<parameter name="BRANCH_CD" class="java.lang.String"/>
+	<parameter name="RDO_CD" class="java.lang.String"/>
+	<parameter name="BUSINESS_TYPE" class="java.lang.String"/>
+	<parameter name="BUSINESS_ADDRESS" class="java.lang.String"/>
+	<parameter name="FIRST_NAME" class="java.lang.String"/>
+	<parameter name="MIDDLE_NAME" class="java.lang.String"/>
+	<parameter name="LAST_NAME" class="java.lang.String"/>
+	<parameter name="REG_NAME" class="java.lang.String"/>
+	<parameter name="parameter5" class="java.lang.String"/>
+	<parameter name="parameter1" class="java.lang.String"/>
+	<parameter name="EXTENTION_NAME" class="java.lang.String"/>
+	<parameter name="parameter2" class="java.lang.String"/>
+	<parameter name="MACHINE_SIZE" class="java.lang.String"/>
+	<parameter name="TAXPAYER_NAME" class="java.lang.String"/>
+	<parameter name="ADDRESS" class="java.lang.String"/>
+	<parameter name="ACCRED_NO" class="java.lang.String"/>
+	<parameter name="BUSINESS_STATIC" class="java.lang.String"/>
+	<parameter name="BUSINESS_NAME" class="java.lang.String"/>
+	<parameter name="USER_NAME" class="java.lang.String"/>
+	<field name="serialNumber" class="java.lang.String"/>
+	<field name="brand" class="java.lang.String"/>
+	<field name="model" class="java.lang.String"/>
+	<field name="businessTin" class="java.lang.String"/>
+	<field name="branchCode" class="java.lang.String"/>
+	<field name="businessName" class="java.lang.String"/>
+	<field name="transNumber" class="java.lang.String"/>
+	<field name="machineType.value" class="java.lang.String"/>
+	<field name="roving" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="286" splitType="Stretch">
+			<image>
+				<reportElement  x="244" y="0" width="858" height="286"/>
+				<imageExpression><![CDATA["images/Picture1.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement  x="118" y="10" width="144" height="84"/>
+				<imageExpression><![CDATA["images/Picture2.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement  x="0" y="159" width="100" height="20"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Type of Permit:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="45" width="779" height="17"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUREAU OF INTERNAL REVENUE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="80" width="779" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Application for Registration of Sales Machines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="10" width="779" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[REPUBLIC OF THE PHILIPPINES]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="170" y="159" width="149" height="20"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PERMIT_TYPE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="140" width="100" height="20"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Application Status:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="629" y="61" width="75" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Date Generated:]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="704" y="61" width="75" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CURRENT_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="170" y="140" width="149" height="20"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{APP_STATUS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="29" width="779" height="17"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT OF FINANCE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="247" width="136" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MACHINE DETAILS]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="170" y="178" width="381" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TAXPAYER_NAME}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  x="170" y="197" width="459" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ADDRESS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="178" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Registered Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="197" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Registered Address:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement  style="table_TH" x="362" y="0" width="61" height="35" backcolor="#CCCCCC"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Serial Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="423" y="0" width="57" height="35" backcolor="#CCCCCC"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Brand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="480" y="0" width="59" height="35" backcolor="#CCCCCC"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Model]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="0" y="0" width="100" height="35" backcolor="#CCCCCC"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="100" y="0" width="39" height="35" backcolor="#CCCCCC"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Branch]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="139" y="0" width="123" height="35" backcolor="#CCCCCC"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Business Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="607" y="0" width="73" height="35" backcolor="#CCCCCC"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Transaction No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="262" y="0" width="100" height="35" backcolor="#CCCCCC"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SPM Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="539" y="0" width="68" height="35" backcolor="#CCCCCC"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Roving]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="362" y="0" width="61" height="35"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{serialNumber}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="423" y="0" width="57" height="35"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{brand}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="480" y="0" width="59" height="35"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{model}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="35"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{businessTin}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="100" y="0" width="39" height="35"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{branchCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" mode="Opaque" x="139" y="0" width="123" height="35"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{businessName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="607" y="0" width="73" height="35"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{transNumber}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="262" y="0" width="100" height="35"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{machineType.value}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="539" y="0" width="68" height="35"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{roving}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement  x="582" y="5" width="100" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Printed by :]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="682" y="5" width="105" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{USER_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

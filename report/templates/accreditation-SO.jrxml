@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="accred-softwareOnly" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<property name="ireport.zoom" value="1.1269722013523664"/>
+	<property name="ireport.x" value="50"/>
+	<property name="ireport.y" value="109"/>
+	<parameter name="CURRENT_DATE" class="java.lang.String"/>
+	<parameter name="USER_NAME" class="java.lang.String"/>
+	<parameter name="REP_NAME" class="java.lang.String"/>
+	<field name="businessTIN" class="java.lang.String"/>
+	<field name="branchCode" class="java.lang.String"/>
+	<field name="businessName" class="java.lang.String"/>
+	<field name="productType.value" class="java.lang.String"/>
+	<field name="software.softwareName" class="java.lang.String"/>
+	<field name="software.softwareVersion" class="java.lang.String"/>
+	<field name="software.remarks.value" class="java.lang.String"/>
+	<field name="software.features" class="java.lang.String"/>
+	<field name="status.value" class="java.lang.String"/>
+	<field name="transactionNo" class="java.lang.String"/>
+	<field name="ownerName.firstName" class="java.lang.String"/>
+	<field name="registeredName" class="java.lang.String"/>
+	<field name="ownerName.middleName" class="java.lang.String"/>
+	<field name="ownerName.lastName" class="java.lang.String"/>
+	<field name="businessType.key" class="java.lang.String"/>
+	<field name="software.maxSalesCapacity" class="java.math.BigDecimal"/>
+	<field name="software.resetCounterNumber" class="java.lang.String"/>
+	<field name="authorizedRep.name.firstName" class="java.lang.String"/>
+	<field name="authorizedRep.name.lastName" class="java.lang.String"/>
+	<field name="authorizedRep.name.middleName" class="java.lang.String"/>
+	<field name="authorizedRep.name.extensionName" class="java.lang.String"/>
+	<field name="authorizedRep.TIN" class="java.lang.String"/>
+	<field name="authorizedRep.contactDetail.emailAddress" class="java.lang.String"/>
+	<field name="authorizedRep.contactDetail.mobileNo" class="java.lang.String"/>
+	<field name="rdoCode" class="java.lang.String"/>
+	<field name="businessAddress" class="java.lang.String"/>
+	<field name="software.resetCounterNumberMaximumRange" class="java.lang.String"/>
+	<variable name="businessDescLabel" class="java.lang.String"/>
+	<variable name="businessDescValue" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="67" splitType="Stretch">
+			<staticText>
+				<reportElement  x="205" y="20" width="169" height="17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT OF FINANCE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="194" y="0" width="191" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[REPUBLIC OF THE PHILIPPINES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="185" y="37" width="208" height="17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUREAU OF INTERNAL REVENUE]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement  x="105" y="0" width="63" height="59"/>
+				<imageExpression><![CDATA["images/Picture2.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement  x="369" y="7" width="88" height="20"/>
+				<textElement/>
+				<text><![CDATA[Date Generated:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="460" y="7" width="108" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{CURRENT_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="58" splitType="Stretch">
+			<staticText>
+				<reportElement  x="185" y="20" width="208" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Application of Accreditation]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="521" splitType="Stretch">
+			<image>
+				<reportElement  x="52" y="0" width="464" height="504"/>
+				<imageExpression><![CDATA["images/Picture1.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement  x="32" y="59" width="136" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUSINESS DETAILS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="32" y="79" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Business TIN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="32" y="99" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Branch Code:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="32" y="119" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Business Name:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="259" y="79" width="166" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{businessTIN}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="259" y="99" width="166" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{branchCode}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="259" y="119" width="277" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{businessName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="32" y="346" width="171" height="18"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MACHINE SOFTWARE DETAILS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="32" y="365" width="136" height="18"/>
+				<textElement/>
+				<text><![CDATA[Type of Machine/Software:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="32" y="383" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Software Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="32" y="402" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Software Version:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="32" y="422" width="225" height="20"/>
+				<textElement/>
+				<text><![CDATA[Maximum Accumulating Sales Capacity:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="32" y="442" width="225" height="20"/>
+				<textElement/>
+				<text><![CDATA[Reset Counter Number (Maximum Digits):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  positionType="Float" x="32" y="482" width="100" height="35"/>
+				<textElement/>
+				<text><![CDATA[Features:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="258" y="365" width="165" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{productType.value}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="257" y="383" width="191" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{software.softwareName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="257" y="402" width="191" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{software.softwareVersion}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="257" y="422" width="234" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($F{software.maxSalesCapacity}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="257" y="442" width="214" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{software.resetCounterNumber}.toString()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  positionType="Float" x="257" y="482" width="280" height="35"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{software.features}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="32" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Transaction Number:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="32" y="20" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Application Status:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="259" y="0" width="173" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transactionNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="259" y="20" width="166" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{status.value}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="32" y="139" width="168" height="37"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[($F{businessType.key}.equals("028"))?"Owner Name:":"Registered Name:"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="259" y="139" width="200" height="37"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[($F{businessType.key}.equals("028"))?
+$F{ownerName.lastName}+", "+
+$F{ownerName.firstName}+" "+
+$F{ownerName.middleName}
+:$F{registeredName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="33" y="262" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[TIN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="33" y="302" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Email Address:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="33" y="282" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="33" y="322" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Contact No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="32" y="241" width="195" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AUTHORIZED REPRESENTATIVE]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="259" y="261" width="139" height="21"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{authorizedRep.TIN}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="258" y="302" width="278" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{authorizedRep.contactDetail.emailAddress}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="258" y="322" width="173" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{authorizedRep.contactDetail.mobileNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="259" y="282" width="277" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{REP_NAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="32" y="176" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[RDO:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="259" y="176" width="166" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{rdoCode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="32" y="196" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="259" y="196" width="277" height="32"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{businessAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="32" y="462" width="225" height="20"/>
+				<textElement/>
+				<text><![CDATA[Maximum Range of OR/Sales Invoice:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="257" y="462" width="214" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{software.resetCounterNumberMaximumRange}.toString()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="8" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement  x="405" y="14" width="61" height="20"/>
+				<textElement/>
+				<text><![CDATA[printed by:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="466" y="14" width="89" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{USER_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="9" splitType="Stretch"/>
+	</summary>
+</jasperReport>

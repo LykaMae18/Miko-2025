@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BIRUserInfoDetails" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="108"/>
+	<parameter name="DATE_CREATED" class="java.lang.String"/>
+	<parameter name="LAST_LOGIN_DATE" class="java.lang.String"/>
+	<parameter name="LAST_PASSWORD_CHANGE" class="java.lang.String"/>
+	<field name="systemType.value" class="java.lang.String"/>
+	<field name="fullName.lastName" class="java.lang.String"/>
+	<field name="fullName.firstName" class="java.lang.String"/>
+	<field name="fullName.middleName" class="java.lang.String"/>
+	<field name="office.value" class="java.lang.String"/>
+	<field name="division.value" class="java.lang.String"/>
+	<field name="role.roleDesc" class="java.lang.String"/>
+	<field name="contactDetail.emailAddress" class="java.lang.String"/>
+	<field name="status.value" class="java.lang.String"/>
+	<field name="securityProfile.username" class="java.lang.String"/>
+	<field name="remarks" class="java.lang.String"/>
+	<field name="profile.value" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[USER DETAILS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="12" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="347" splitType="Stretch">
+			<staticText>
+				<reportElement x="25" y="16" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[System Type:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="36" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Last Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="56" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[First Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="76" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[MIddle Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="96" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Office:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="116" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Division:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="136" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Role:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="156" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Remarks:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="218" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Email Address:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="238" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Current User Status:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="258" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Username:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="278" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Date Created:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="298" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Last Login Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="318" width="123" height="20"/>
+				<textElement/>
+				<text><![CDATA[Last Password Change:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="278" width="167" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{DATE_CREATED}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="169" y="298" width="168" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{LAST_LOGIN_DATE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="169" y="318" width="168" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{LAST_PASSWORD_CHANGE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="169" y="16" width="168" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{systemType.value}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="36" width="221" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fullName.lastName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="56" width="221" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fullName.firstName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="76" width="221" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fullName.middleName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="96" width="379" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{office.value}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="116" width="379" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{division.value}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="136" width="221" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{role.roleDesc}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="156" width="221" height="42"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{remarks}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="218" width="167" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{contactDetail.emailAddress}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="238" width="167" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{status.value}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="258" width="167" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{securityProfile.username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="198" width="167" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{profile.value}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="198" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Profile:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="14" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="12" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="13" splitType="Stretch"/>
+	</summary>
+</jasperReport>

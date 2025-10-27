@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <bean id="accountEnrollmentService" class="com.indracompany.acrsal.main.enrollment.AccountEnrollmentServiceImpl">
+    <property name="businessDao" ref="businessDao" />
+    <property name="userDao" ref="userDao" />
+    <property name="sequenceDao" ref="sequenceDao" />
+    <property name="enrollmentMailer" ref="enrollmentMailer" />
+    <property name="accountApprovalMailer" ref="accountApprovalMailer" />
+    <property name="accountOnholdMailer" ref="accountOnholdMailer" />
+    <property name="accountRejectedMailer" ref="accountRejectedMailer" />
+    <property name="accountActivateDeactivate" ref="accountActivateDeactivate" />
+  </bean>
+
+  <bean id="taskManagerService" class="com.indracompany.acrsal.main.enrollment.TaskManagerServiceImpl">
+    <property name="utilDao" ref="utilDao" />
+    <property name="businessDao" ref="businessDao" />
+  </bean>
+
+  <bean id="referenceService" class="com.indracompany.acrsal.main.reference.ReferenceServiceImpl">
+    <property name="referenceDao" ref="referenceDao" />
+  </bean>
+
+  <bean id="loginService" class="com.indracompany.acrsal.main.general.LoginServiceImpl">
+    <property name="userDao" ref="userDao" />
+    <property name="businessDao" ref="businessDao" />
+  </bean>
+
+  <bean id="userService" class="com.indracompany.acrsal.main.general.UserServiceImpl" parent="abstractUserService">
+
+    <property name="forgotPasswordMailer" ref="forgotPasswordMailer" />
+    <property name="changePasswordMailer" ref="changePasswordMailer" />
+    <property name="baseFolder" value="${acrsal.files.basepath}" />    
+  </bean>
+
+  <bean id="salesReportService" class="com.indracompany.acrsal.main.salesreport.SalesReportServiceImpl">
+    <property name="salesReportDao" ref="salesReportDao" />
+    <property name="sequenceDao" ref="sequenceDao" />
+    <property name="businessDao" ref="businessDao" />
+    <property name="userDao" ref="userDao" />
+    <property name="salesUploadMailer" ref="salesUploadMailer" />
+    <property name="salesReportUpload" value="${acrsal.files.salesreportupload}" />
+    <property name="salesReportUploadProcess" value="${acrsal.files.salesreportprocess}" />
+    <property name="salesReportUploadArchive" value="${acrsal.files.salesreportarchive}" />
+    <property name="salesSMSUpload" value="${acrsal.files.salessmsupload}" />
+    <property name="salesSMSProcess" value="${acrsal.files.salessmsprocess}" />
+    <property name="salesSMSArchive" value="${acrsal.files.salessmsarchive}" />
+    <property name="salesSMSFormat" value="${acrsal.files.salessmsformat}" />
+    <property name="smsOutgoingArchive" value="${acrsal.files.smsoutgoingarchive}" />
+    <property name="birFtpFileConnection" ref="birFtpFileConnection" />
+    <property name="salesMailReceiver" ref="salesMailReceiver" />
+    <property name="sourceFolder" value="${acrsal.mail.receiver.sourceFolder}" />
+    <property name="salesReportUploadInvalidEmailMailer" ref="salesReportUploadInvalidEmailMailer" />
+    <property name="smsReplyTransactionFailed" value="${acrsal.sms.reply.transactionfailed}" />
+    <property name="smsReplyReportFormat" value="${acrsal.sms.reply.reportformat}" />
+    <property name="smsReplyUnauthorized" value="${acrsal.sms.reply.unauthorized}" />
+  </bean>
+
+  <bean id="accreditationService" class="com.indracompany.acrsal.main.accreditation.AccreditationServiceImpl">
+    <property name="accreditationDao" ref="accreditationDao" />
+    <property name="sequenceDao" ref="sequenceDao" />
+    <property name="businessDao" ref="businessDao" />
+    <property name="userDao" ref="userDao" />
+    <property name="referenceDao" ref="referenceDao" />
+    <property name="accreditationMailer" ref="accreditationMailer" />
+    <property name="accreditationApprovalMailer" ref="accreditationApprovalMailer" />
+    <property name="accreditationDenialMailer" ref="accreditationDenialMailer" />
+    <property name="accreditationCertificateGenerator" ref="accreditationCertificateGenerator" />
+    <property name="accreditationCertificateGeneratorSO" ref="accreditationCertificateGeneratorSO" />
+    <property name="letterOfDenialReportGenerator" ref="letterOfDenialReportGenerator" />
+    <property name="accreditationSOExportGenerator" ref="accreditationSOExportGenerator" />
+    <property name="accreditationCRMExportGenerator" ref="accreditationCRMExportGenerator" />
+    <property name="accreditationPOSExportGenerator" ref="accreditationPOSExportGenerator" />
+    <property name="revokeAccreditationMailer" ref="revokeAccreditationMailer" />
+    <property name="letterOfRevocationReportGenerator" ref="letterOfRevocationReportGenerator" />
+    <property name="letterOfRevocationReportCRMGenerator" ref="letterOfRevocationReportCRMGenerator" />
+    <property name="letterOfRevocationReportPOSandOthersGenerator" ref="letterOfRevocationReportPOSandOthersGenerator" />
+    <property name="letterOfRevocationReportSoftwareGenerator" ref="letterOfRevocationReportSoftwareGenerator" />
+    <property name="eAccRegLink"  value="${url.eAccReg.link}" />
+    
+  </bean>
+
+  <bean id="registrationService" class="com.indracompany.acrsal.main.registration.RegistrationServiceImpl">
+    <property name="businessDao" ref="businessDao" />
+    <property name="registrationDao" ref="registrationDao" />
+    <property name="sequenceDao" ref="sequenceDao" />
+    <property name="userDao" ref="userDao" />    
+    <property name="accreditationDao" ref="accreditationDao" />
+    <property name="permitRegistrationMailer" ref="permitRegistrationMailer" />
+    <property name="registrationCRMExportGenerator" ref="registrationCRMExportGenerator" />
+    <property name="registrationOSMExportGenerator" ref="registrationOSMExportGenerator" />
+    <property name="registrationSPMExportGenerator" ref="registrationSPMExportGenerator" />
+    <property name="registrationPOSStandAloneExportGenerator" ref="registrationPOSStandAloneExportGenerator" />
+    <property name="registrationPOSConnectedExportGenerator" ref="registrationPOSConnectedExportGenerator" />
+    <property name="approvedPermitRegistrationMailer" ref="approvedPermitRegistrationMailer" />
+    <property name="deniedPermitRegistrationMailer" ref="deniedPermitRegistrationMailer" />
+    <property name="cancellationOfPermitMailer" ref="cancellationOfPermitMailer" />
+    <property name="conversionToFinalOfPermitMailer" ref="conversionToFinalOfPermitMailer" />
+    <property name="registrationLetterOfCancellationGenerator" ref="registrationLetterOfCancellationGenerator" />
+    <property name="permitForUploadRegistrationMailer" ref="permitForUploadRegistrationMailer" />
+    <property name="uploadedCRMRegistrationExportGenerator" ref="uploadedCRMRegistrationExportGenerator" />
+    <property name="uploadedOSMRegistrationExportGenerator" ref="uploadedOSMRegistrationExportGenerator" />
+    <property name="uploadedSPMRegistrationExportGenerator" ref="uploadedSPMRegistrationExportGenerator" />
+    <property name="uploadedPOSSARegistrationExportGenerator" ref="uploadedPOSSARegistrationExportGenerator" />
+    <property name="uploadedPOSWTRegistrationExportGenerator" ref="uploadedPOSWTRegistrationExportGenerator" />
+  </bean>
+
+  <bean id="reportsService" class="com.indracompany.acrsal.main.reports.ReportsServiceImpl">
+    <property name="reportsDao" ref="reportsDao" />
+    <property name="businessDao" ref="businessDao" />
+    <property name="reportsAmendedSalesGenerator" ref="reportsAmendedSalesGenerator" />
+    <property name="reportsLateMonthlySalesGenerator" ref="reportsLateMonthlySalesGenerator" />
+    <property name="reportsNoMonthlySalesGenerator" ref="reportsNoMonthlySalesGenerator" />
+    <property name="reportsZeroMonthlySalesGenerator" ref="reportsZeroMonthlySalesGenerator" />
+    <property name="reportsMonthlySalesGenerator" ref="reportsMonthlySalesGenerator" />
+    <property name="reportsSalesLedgerGenerator" ref="reportsSalesLedgerGenerator" />
+
+    <property name="reportsAccreditedSoftwarePerSupplierGenerator" ref="reportsAccreditedSoftwarePerSupplierGenerator" />
+    <property name="reportsRegisteredSpecialPurposeMachinesGenerator" ref="reportsRegisteredSpecialPurposeMachinesGenerator" />
+    <property name="reportsRegisteredMachinesConvertedToFinalGenerator" ref="reportsRegisteredMachinesConvertedToFinalGenerator" />
+    <property name="reportsMachineWithProvisionalPermitGenerator" ref="reportsMachineWithProvisionalPermitGenerator" />
+    <property name="reportsMachineRegistrationPerRDOGenerator" ref="reportsMachineRegistrationPerRDOGenerator" />
+    <property name="reportsListOfMachineWithFinalPermit" ref="reportsListOfMachineWithFinalPermit" />
+    <property name="reportsMachinesWithCancelledMINGenerator" ref="reportsMachinesWithCancelledMINGenerator" />
+    <property name="reportsUserAccessGenerator" ref="reportsUserAccessGenerator" />
+
+    <property name="reportsAmendedSalesFileName" value="AmendedSalesReport"></property>
+    <property name="reportsLateMonthlySalesFileName" value="LateMonthlySalesReport"></property>
+    <property name="reportsNoMonthlySalesFileName" value="NoMonthlySalesReport"></property>
+    <property name="reportsZeroMonthlySalesFileName" value="ZeroMonthlySalesReport"></property>
+    <property name="reportsMonthlySalesFileName" value="MonthlySalesReport" />
+
+    <property name="reportsAccreditedSoftwarePerSupplierFileName" value="AccreditedSoftwarePerSupplier" />
+    <property name="reportsRegisteredSpecialPurposeMachinesFileName" value="reportsListOfRegisteredSpecialPurposeMachines" />
+
+    <property name="managementReportLocation" value="${acrsal.files.generation.management.report}" />
+  </bean>
+
+  <bean id="permitService" class="com.indracompany.acrsal.main.registration.PermitServiceImpl">
+    <property name="permitDao" ref="permitDao" />
+    <property name="sequenceDao" ref="sequenceDao" />
+    <property name="registrationDao" ref="registrationDao" />
+    <property name="permitFinalCRMGenerator" ref="permitFinalCRMGenerator" />
+    <property name="permitProvisionalCRMGenerator" ref="permitProvisionalCRMGenerator" />
+    <property name="permitFinalOSMGenerator" ref="permitFinalOSMGenerator" />
+    <property name="permitProvisionalOSMGenerator" ref="permitProvisionalOSMGenerator" />
+    <property name="permitSPMGenerator" ref="permitSPMGenerator" />
+
+    <property name="permitFinalPOSDecentralized" ref="permitFinalPOSDecentralized" />
+    <property name="permitFinalPOSGlobal" ref="permitFinalPOSGlobal" />
+    <property name="permitFinalPOSServerCons" ref="permitFinalPOSServerCons" />
+    <property name="permitFinalPOSStandAlone" ref="permitFinalPOSStandAlone" />
+
+    <property name="permitProvisionalPOSDecentralized" ref="permitProvisionalPOSDecentralized" />
+    <property name="permitProvisionalPOSGlobal" ref="permitProvisionalPOSGlobal" />
+    <property name="permitProvisionalPOSServerCons" ref="permitProvisionalPOSServerCons" />
+    <property name="permitProvisionalPOSStandAlone" ref="permitProvisionalPOSStandAlone" />
+  </bean>
+
+  <bean id="sysAdService" class="com.indracompany.sysad.main.SysAdServiceImpl">
+    <property name="rdoAccessesDao" ref="rdoAccessesDao" />
+    <property name="roleAccessDao" ref="roleAccessDao" />
+    <property name="reportsAccessDao" ref="reportsAccessDao" />
+    <property name="reportsAccessHistDao" ref="reportsAccessHistDao" />
+    <property name="rdoAccessHistDao" ref="rdoAccessHistDao" />
+  </bean>
+
+  <bean id="userManagementService" class="com.indracompany.sysad.main.usermanagement.UserManagementServiceImpl">
+    <property name="userManagementDAO" ref="userManagementDAO" />
+    <property name="birUserDetailExportGenerator" ref="birUserDetailExportGenerator" />
+    <property name="passwordResetExportGenerator" ref="passwordResetExportGenerator" />
+    <property name="userService" ref="userService" />
+    <property name="userDao" ref="userDao" />
+    <property name="roleAccessDao" ref="roleAccessDao" />
+  </bean>
+
+  <bean id="userSearchService" class="com.indracompany.sysad.main.UserSearchServiceImpl">
+  </bean>
+
+  <bean id="auditTrailService" class="com.indracompany.sysad.main.AuditTrailServiceImpl">
+    <property name="auditTrailDao" ref="auditTrailDao" />
+  </bean>
+
+  <bean id="accountEnrollmentSysadService" class="com.indracompany.sysad.main.enrollment.AccountEnrollmentServiceImpl">
+    <property name="userDao" ref="userDao" />
+    <property name="userManagementDAO" ref="userManagementDAO" />
+    <property name="roleAccessDao" ref="roleAccessDao" />
+    <property name="sysadUserDetailsMailer" ref="sysadUserDetailsMailer" />
+    <property name="rdoAccessesDao" ref="rdoAccessesDao" />
+    <property name="rdoAccessHistDao" ref="rdoAccessHistDao" />
+    <property name="userService" ref="userService" />
+  </bean>
+
+</beans>

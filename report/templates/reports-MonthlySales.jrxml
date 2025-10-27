@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TaxpayerWithMonthlySalesReport" pageWidth="936" pageHeight="612" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="896" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<property name="ireport.zoom" value="1.4615378250000008"/>
+	<property name="ireport.x" value="537"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="RDO_DESC" class="java.lang.String"/>
+	<parameter name="SALES_DATE" class="java.lang.String"/>
+	<parameter name="USER_NAME" class="java.lang.String"/>
+	<parameter name="TIME_STAMP" class="java.lang.String"/>
+	<field name="seqNo" class="java.lang.String"/>
+	<field name="tin" class="java.lang.String"/>
+	<field name="branchCode" class="java.lang.String"/>
+	<field name="taxpayerName" class="java.lang.String"/>
+	<field name="min" class="java.lang.String"/>
+	<field name="permitNo" class="java.lang.String"/>
+	<field name="serialNo" class="java.lang.String"/>
+	<field name="vatableSales" class="java.lang.String"/>
+	<field name="vatZeroRatedSales" class="java.lang.String"/>
+	<field name="vatExempt" class="java.lang.String"/>
+	<field name="subjectToOther" class="java.lang.String"/>
+	<field name="totalSales" class="java.lang.String"/>
+	<field name="submissionDate" class="java.lang.String"/>
+	<field name="srn" class="java.lang.String"/>
+	<field name="referenceNumber" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="72" splitType="Stretch">
+			<textField>
+				<reportElement  x="226" y="10" width="351" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{RDO_DESC}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="226" y="31" width="351" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[List of Machines per Taxpayer with Monthly Sales Report Submission]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="279" y="52" width="244" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["For the month of " + $P{SALES_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement  mode="Opaque" x="0" y="10" width="28" height="59" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Row
+No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="28" y="10" width="67" height="59" forecolor="#FFFFFF" backcolor="#006AB0">
+					<property name="net.sf.jasperreports.export.pdf.tag.th"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none"/>
+				<text><![CDATA[TIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="95" y="10" width="49" height="59" forecolor="#FFFFFF" backcolor="#006AB0">
+					<property name="net.sf.jasperreports.export.pdf.tag.th"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none"/>
+				<text><![CDATA[Branch Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="144" y="10" width="82" height="59" forecolor="#FFFFFF" backcolor="#006AB0">
+					<property name="net.sf.jasperreports.export.pdf.tag.th"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none"/>
+				<text><![CDATA[Taxpayer Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="226" y="10" width="53" height="59" forecolor="#FFFFFF" backcolor="#006AB0">
+					<property name="net.sf.jasperreports.export.pdf.tag.th"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none"/>
+				<text><![CDATA[MIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="279" y="10" width="57" height="59" forecolor="#FFFFFF" backcolor="#006AB0">
+					<property name="net.sf.jasperreports.export.pdf.tag.th"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none"/>
+				<text><![CDATA[Permit No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="336" y="10" width="58" height="59" forecolor="#FFFFFF" backcolor="#006AB0">
+					<property name="net.sf.jasperreports.export.pdf.tag.th"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none"/>
+				<text><![CDATA[Serial No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="394" y="10" width="53" height="59" forecolor="#FFFFFF" backcolor="#006AB0">
+					<property name="net.sf.jasperreports.export.pdf.tag.th"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none"/>
+				<text><![CDATA[Vatable Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="447" y="10" width="67" height="59" forecolor="#FFFFFF" backcolor="#006AB0">
+					<property name="net.sf.jasperreports.export.pdf.tag.th"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none"/>
+				<text><![CDATA[VAT Zero-rated Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="514" y="10" width="67" height="59" forecolor="#FFFFFF" backcolor="#006AB0">
+					<property name="net.sf.jasperreports.export.pdf.tag.th"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none"/>
+				<text><![CDATA[VAT Exempt Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="581" y="10" width="75" height="59" forecolor="#FFFFFF" backcolor="#006AB0">
+					<property name="net.sf.jasperreports.export.pdf.tag.th"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none"/>
+				<text><![CDATA[Sales Subject to other percentage taxes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="757" y="10" width="69" height="59" forecolor="#FFFFFF" backcolor="#006AB0">
+					<property name="net.sf.jasperreports.export.pdf.tag.th"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none"/>
+				<text><![CDATA[Date of Submission]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="826" y="10" width="70" height="59" forecolor="#FFFFFF" backcolor="#006AB0">
+					<property name="net.sf.jasperreports.export.pdf.tag.th"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none"/>
+				<text><![CDATA[Sales Report Number Issued]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="700" y="10" width="57" height="59" forecolor="#FFFFFF" backcolor="#006AB0">
+					<property name="net.sf.jasperreports.export.pdf.tag.th"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none"/>
+				<text><![CDATA[Last OR/ Invoice/ Transaction Number ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="656" y="10" width="44" height="59" forecolor="#FFFFFF" backcolor="#006AB0">
+					<property name="net.sf.jasperreports.export.pdf.tag.th"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none"/>
+				<text><![CDATA[Total Sales]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="28" y="0" width="67" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tin}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="95" y="0" width="49" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{branchCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="144" y="0" width="82" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{taxpayerName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="226" y="0" width="53" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{min}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="279" y="0" width="57" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{permitNo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="336" y="0" width="58" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{serialNo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="394" y="0" width="53" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{vatableSales}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="447" y="0" width="67" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{vatZeroRatedSales}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="514" y="0" width="67" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{vatExempt}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="581" y="0" width="75" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{subjectToOther}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="656" y="0" width="44" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{totalSales}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="757" y="0" width="69" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{submissionDate}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="826" y="0" width="70" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{srn}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="0" y="0" width="28" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}+""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="700" y="0" width="57" height="40" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{referenceNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="74">
+			<textField>
+				<reportElement  x="728" y="10" width="168" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Generated by: " + $P{USER_NAME}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement  mode="Transparent" x="859" y="50" width="37" height="20"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="807" y="50" width="52" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="696" y="30" width="200" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{TIME_STAMP}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

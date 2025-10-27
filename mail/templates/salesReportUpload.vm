@@ -1,0 +1,177 @@
+BIR eSales Uploaded Sales Report Results $channel $transNumber
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>BIR eSales Uploaded Sales Report Results $channel</title>
+  </head>
+  <body>
+  	<p>
+  		Hi Mr./Ms. <b>$authorizedName</b>,
+  		
+  		  		
+  		<br> <br>  		
+  		#if($validTemplate == 1 )
+  		Indicated herewith is the result of the uploaded sales report with transaction number $transNumber.
+  		<br> <br>
+  		Please submit corrected format of your sales report similar to the prescribed template. You may encode the correct sales report or use the upload sales report facility of the BIR eSales System. 
+  					
+  		#else	
+  			
+  		#if($salesReportList.size() < 1)
+  			You have uploaded an empty file.
+  			
+  		#else
+  			  		
+  		
+  		Indicated herewith is the result of the uploaded sales report with transaction number $transNumber.
+  		<br>
+		Please be informed that in case of invalid or incorrect data, corresponding error message/s can be found at the Remarks column (Please see table below).
+  				
+		<br> <br>
+		<table border="1">
+		<thead>
+		<tr>
+			<th>Line Number</th>
+			<th>Business TIN</th>
+			<th>Branch Code</th>
+			<th>Month</th>
+			<th>Year</th>
+			<th>MIN</th>
+			<th>Last OR No Issued</th>
+			<th>Last Cash Invoice No Issued </th>
+			<th>Last Charge Invoice No Issued </th>
+			<th>Last Transaction No Issued</th>
+			<th>Vatable Sales</th>
+			<th>Vat Zero Rated Sales</th>
+			<th>Vat Exempt Sales</th>
+			<th>Sales Subject to Other Percentage</th>
+			<th>Total Sales</th>			
+			<th>Sales Report Number</th>
+			<th>Report Status</th>
+			<th>Remarks</th>
+		</tr>
+		</thead>
+		<tbody>		
+		#foreach($salesReport in $salesReportList)
+			#if($salesReport.errorMessageList && $salesReport.errorMessageList.size() > 0)
+				<tr>
+				<td>$salesReport.lineNumber</td>
+				#if(!$salesReport.businessTIN)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.businessTIN</td>
+				#end
+				#if(!$salesReport.branchCode)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.branchCode</td>
+				#end        
+				#if($salesReport.month == 0)    
+					<td>$salesReport.monthInString</td>
+				#elseif(!$salesReport.month)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.month</td>
+				#end
+				#if($salesReport.year == 0)    
+					<td>$salesReport.yearInString</td>
+				#elseif(!$salesReport.year)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.year</td>
+				#end
+				#if(!$salesReport.MIN)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.MIN</td>
+				#end
+				#if(!$salesReport.lastORNo)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.lastORNo</td>
+				#end
+				#if(!$salesReport.lastCashInvoiceNo)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.lastCashInvoiceNo</td>
+				#end
+				#if(!$salesReport.lastChargeInvoiceNo)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.lastChargeInvoiceNo</td>
+				#end
+				#if(!$salesReport.lastTransactionNo)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.lastTransactionNo</td>
+				#end
+				#if(!$salesReport.vatableSales)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.vatableSales</td>
+				#end
+				#if(!$salesReport.vatZeroRatedSales)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.vatZeroRatedSales</td>
+				#end
+				#if(!$salesReport.vatExemptSales)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.vatExemptSales</td>
+				#end
+				#if(!$salesReport.salesSubjToOtherTax)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.salesSubjToOtherTax</td>
+				#end
+				#if(!$salesReport.totalSales)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.totalSales</td>
+				#end
+				#if(!$salesReport.salesReportNumber)    
+					<td>&nbsp;&nbsp;</td>
+				#else        
+					<td>$salesReport.salesReportNumber</td>
+				#end
+				#if(!$salesReport.salesStatus.value)    
+					<td>ERROR FOUND</td>
+				#else        
+					<td>$salesReport.salesStatus.value</td>
+				#end                                                                                                                        
+				<td>
+					<ul>
+					#foreach($errorMessage in $salesReport.errorMessageList)
+					<li>$errorMessage</li>
+					#end
+					</ul>
+				</td>        
+				</tr>
+			#end
+			#end
+		</tbody>
+		</table>		
+		
+		<br> <br>
+		
+		All valid sales report have been saved to your account.  
+		In case of invalid/erroneous data, you may encode the correct sales report or use the upload sales report facility of the BIR eSales System.
+		
+		
+		#end
+		#end
+		<br> <br> 
+		Thank you.
+		
+		<br> <br>
+		For inquiries and other related concerns, please contact your respective Revenue District Office (RDO), Large Taxpayer District Office (LTDO), Large Taxpayers Assistance Division (LTAD), or Large Taxpayer - Excise Tax Regulatory Division (LT-ETRD): http://www.bir.gov.ph/directory/rdo.htm, 
+		<br>or you may also reach BIR at http://www.bir.gov.ph/, 
+		<br>or thru our Customer Assistance Division (CAD) at Telephone No: 981-8888, 
+		<br>or e-mail at contact_us@cctr.bir.gov.ph		
+		<br> <br>
+    </p>
+  
+  </body>
+</html>

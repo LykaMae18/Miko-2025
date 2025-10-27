@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="registration-SPM-NEW" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<property name="ireport.zoom" value="1.6105100000000037"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="37"/>
+	<parameter name="CURRENT_DATE" class="java.lang.String"/>
+	<parameter name="TRANS_NO" class="java.lang.String"/>
+	<parameter name="APP_STATUS" class="java.lang.String"/>
+	<parameter name="PERMIT_TYPE" class="java.lang.String"/>
+	<parameter name="BUSINESS_TIN" class="java.lang.String"/>
+	<parameter name="BRANCH_CD" class="java.lang.String"/>
+	<parameter name="RDO_CD" class="java.lang.String"/>
+	<parameter name="BUSINESS_TYPE" class="java.lang.String"/>
+	<parameter name="BUSINESS_ADDRESS" class="java.lang.String"/>
+	<parameter name="FIRST_NAME" class="java.lang.String"/>
+	<parameter name="MIDDLE_NAME" class="java.lang.String"/>
+	<parameter name="LAST_NAME" class="java.lang.String"/>
+	<parameter name="REG_NAME" class="java.lang.String"/>
+	<parameter name="parameter5" class="java.lang.String"/>
+	<parameter name="parameter1" class="java.lang.String"/>
+	<parameter name="EXTENTION_NAME" class="java.lang.String"/>
+	<parameter name="parameter2" class="java.lang.String"/>
+	<parameter name="MACHINE_SIZE" class="java.lang.String"/>
+	<parameter name="parameter3" class="java.lang.String"/>
+	<parameter name="parameter6" class="java.lang.String"/>
+	<parameter name="ACCRED_NO" class="java.lang.String"/>
+	<parameter name="BUSINESS_STATIC" class="java.lang.String"/>
+	<parameter name="BUSINESS_NAME" class="java.lang.String"/>
+	<parameter name="USER_NAME" class="java.lang.String"/>
+	<field name="serialNumber" class="java.lang.String"/>
+	<field name="brand" class="java.lang.String"/>
+	<field name="model" class="java.lang.String"/>
+	<field name="roving" class="java.lang.String"/>
+	<field name="machineType" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="346" splitType="Stretch">
+			<image>
+				<reportElement  x="230" y="0" width="858" height="346"/>
+				<imageExpression><![CDATA["images/Picture1.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement  x="109" y="10" width="144" height="84"/>
+				<imageExpression><![CDATA["images/Picture2.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement  x="135" y="107" width="149" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CURRENT_DATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="30" y="250" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[RDO Code:]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="135" y="250" width="148" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RDO_CD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="135" y="154" width="149" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TRANS_NO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="30" y="202" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Permit Type:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="30" y="231" width="100" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Business Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="30" y="183" width="100" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Permit Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="10" width="802" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPUBLIC OF THE PHILIPPINES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="30" y="154" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Transaction Number:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement  x="135" y="326" width="652" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BUSINESS_ADDRESS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="135" y="269" width="148" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BUSINESS_TIN} + " - " + $P{BRANCH_CD}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="29" width="802" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT OF FINANCE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  stretchType="RelativeToTallestObject" mode="Transparent" x="30" y="307" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Business Name:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement  mode="Transparent" x="135" y="307" width="652" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BUSINESS_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="135" y="202" width="147" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PERMIT_TYPE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="30" y="326" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Business Address:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="74" width="802" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Application for Registration of Sales Machines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="30" y="135" width="100" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Transaction Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="48" width="802" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUREAU OF INTERNAL REVENUE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="30" y="269" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[TIN-Branch Code:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="30" y="107" width="100" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date Submitted]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="30" y="288" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{BUSINESS_TYPE}.equals("Individual"))?
+"Owner Name :":"Registered Name :"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  mode="Transparent" x="135" y="288" width="652" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{BUSINESS_TYPE}.equals("Individual"))?
+$P{FIRST_NAME}+' '+
+$P{MIDDLE_NAME}+' '+
+$P{LAST_NAME}+' '+
+$P{EXTENTION_NAME}
+:$P{REG_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement  mode="Opaque" x="150" y="5" width="120" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Serial Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="270" y="5" width="120" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Brand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="30" y="5" width="120" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SPM Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="390" y="5" width="120" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Model]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="510" y="5" width="120" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Roving]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="630" y="5" width="120" height="30" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="150" y="0" width="120" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{serialNumber}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="270" y="0" width="120" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{brand}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="30" y="0" width="120" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{machineType}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="390" y="0" width="120" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{model}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="510" y="0" width="120" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{roving}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="630" y="0" width="120" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{APP_STATUS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement  x="514" y="5" width="236" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Generated by : " + $P{USER_NAME} + "  " + $P{CURRENT_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

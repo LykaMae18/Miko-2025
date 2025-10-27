@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sample1" pageWidth="936" pageHeight="612" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="896" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<property name="ireport.zoom" value="0.7009877989627851"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0FFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" />
+	<subDataset name="Table Dataset 2" />
+	<parameter name="SALES_DATE" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RDO_DESC" class="java.lang.String"/>
+	<parameter name="USER_NAME" class="java.lang.String"/>
+	<parameter name="TIME_STAMP" class="java.lang.String"/>
+	<field name="tin" class="java.lang.String"/>
+	<field name="branchCode" class="java.lang.String"/>
+	<field name="taxpayerName" class="java.lang.String"/>
+	<field name="min" class="java.lang.String"/>
+	<field name="permitNo" class="java.lang.String"/>
+	<field name="serialNo" class="java.lang.String"/>
+	<field name="vatableSales" class="java.lang.String"/>
+	<field name="vatZeroRatedSales" class="java.lang.String"/>
+	<field name="vatExempt" class="java.lang.String"/>
+	<field name="subjectToOther" class="java.lang.String"/>
+	<field name="totalSales" class="java.lang.String"/>
+	<field name="lastORNo" class="java.lang.String"/>
+	<field name="frequency" class="java.lang.String"/>
+	<field name="submissionDate" class="java.lang.String"/>
+	<field name="srn" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement  x="22" y="30" width="851" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[List of Machines per Taxpayer with Amended Monthly Sales Report Submission]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="22" y="50" width="851" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["For the Month of : " + $P{SALES_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="22" y="10" width="851" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{RDO_DESC}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement  style="table_TH" x="0" y="0" width="22" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Row
+No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="22" y="0" width="45" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[TIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="67" y="0" width="33" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Branch]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="165" y="0" width="54" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Taxpayer Name
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="272" y="0" width="56" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Permit No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="328" y="0" width="63" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Serial No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="391" y="0" width="61" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Vatable Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="452" y="0" width="62" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Vat Zero-
+Rated Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="577" y="0" width="77" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Sales Subject To
+Other Percentage
+Taxes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="219" y="0" width="53" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[MIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="514" y="0" width="63" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Vat Exempt
+Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="654" y="0" width="59" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Total
+Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="713" y="0" width="71" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Last OR/
+Invoice/
+Transaction Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="784" y="0" width="58" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Frequency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="842" y="0" width="54" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Date of
+Submission]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="table_TH" x="100" y="0" width="65" height="60" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[SRN]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="69">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="0" y="0" width="22" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}+""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="22" y="0" width="45" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tin}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="67" y="0" width="33" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{branchCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="165" y="0" width="54" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{taxpayerName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="219" y="0" width="53" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{min}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="272" y="0" width="56" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{permitNo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="328" y="0" width="63" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{serialNo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="391" y="0" width="61" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vatableSales}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="452" y="0" width="62" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vatZeroRatedSales}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="514" y="0" width="63" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vatExempt}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="577" y="0" width="77" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subjectToOther}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="654" y="0" width="59" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalSales}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="713" y="0" width="71" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastORNo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="784" y="0" width="58" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frequency}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="842" y="0" width="54" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{submissionDate}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  style="table_TD" stretchType="RelativeToTallestObject" x="100" y="0" width="65" height="69" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{srn}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="72" splitType="Stretch">
+			<textField>
+				<reportElement  x="697" y="10" width="199" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Generated by:" + $P{USER_NAME}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement  mode="Transparent" x="859" y="50" width="37" height="20"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="807" y="50" width="52" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="697" y="30" width="200" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{TIME_STAMP}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

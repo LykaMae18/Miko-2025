@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="letter_of_revocation" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<property name="ireport.zoom" value="1.0000000000000018"/>
+	<property name="ireport.x" value="21"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CURRENT_DATE" class="java.lang.String"/>
+	<parameter name="SIGNATORY" class="java.lang.String"/>
+	<parameter name="SIGNATORY_POS" class="java.lang.String"/>
+	<parameter name="REGISTERED_NAME" class="java.lang.String"/>
+	<parameter name="BUSINESS_ADDRESS" class="java.lang.String"/>
+	<parameter name="REASON_FOR_REVOCATION" class="java.lang.String"/>
+	<parameter name="ADDITIONAL_REMARKS" class="java.lang.String"/>
+	<parameter name="ACCREDITATION_NUMBER" class="java.lang.String"/>
+	<parameter name="REVOKE_DATE" class="java.lang.String"/>
+	<parameter name="RR_CODE" class="java.lang.String"/>
+	<parameter name="APPROVAL_DATE" class="java.lang.String"/>
+	<parameter name="TIN" class="java.lang.String"/>
+	<parameter name="BRANCH" class="java.lang.String"/>
+	<field name="software.softwareName" class="java.lang.String"/>
+	<field name="software.softwareVersion" class="java.lang.String"/>
+	<field name="software.maxSalesCapacityString" class="java.lang.String"/>
+	<field name="software.resetCounterNumber" class="java.lang.String"/>
+	<field name="software.remarks.value" class="java.lang.String"/>
+	<field name="software.features" class="java.lang.String"/>
+	<field name="software.resetCounterNumberMaximumRange" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="105" splitType="Stretch">
+			<staticText>
+				<reportElement  x="106" y="25" width="369" height="21"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LETTER OF REVOCATION]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  x="26" y="91" width="230" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REGISTERED_NAME}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="308" y="67" width="230" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CURRENT_DATE}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement  x="29" y="2" width="63" height="65"/>
+				<imageExpression><![CDATA["images/Picture2.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement  x="26" y="0" width="230" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BUSINESS_ADDRESS}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="611">
+			<image>
+				<reportElement  x="65" y="0" width="424" height="455"/>
+				<imageExpression><![CDATA["images/Picture1.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement  x="65" y="400" width="120" height="15"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Reason for Revocation:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="65" y="440" width="120" height="15"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Additional Remarks:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="185" y="400" width="302" height="40"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{REASON_FOR_REVOCATION}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="185" y="440" width="302" height="40"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{ADDITIONAL_REMARKS}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement  x="306" y="570" width="207" height="1"/>
+			</line>
+			<staticText>
+				<reportElement  x="63" y="197" width="230" height="20"/>
+				<textElement/>
+				<text><![CDATA[Software Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="63" y="217" width="230" height="20"/>
+				<textElement/>
+				<text><![CDATA[Software Version:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="63" y="237" width="230" height="20"/>
+				<textElement/>
+				<text><![CDATA[Maximum Accumulating Sales Capacity:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="63" y="257" width="230" height="20"/>
+				<textElement/>
+				<text><![CDATA[Reset Counter Number (Maximum Digits):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="63" y="277" width="230" height="20"/>
+				<textElement/>
+				<text><![CDATA[Maximum Range of OR/Sales Invoice:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="63" y="319" width="230" height="20"/>
+				<textElement/>
+				<text><![CDATA[Features:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="65" y="164" width="191" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Software Details]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="293" y="197" width="194" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{software.softwareName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="293" y="217" width="194" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{software.softwareVersion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="293" y="237" width="194" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{software.maxSalesCapacityString}.toString()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="293" y="257" width="194" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{software.resetCounterNumber}.toString()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="293" y="277" width="194" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{software.resetCounterNumberMaximumRange}.toString()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="293" y="319" width="194" height="37"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{software.features}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="293" y="297" width="194" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{software.remarks.value}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="63" y="297" width="230" height="20"/>
+				<textElement/>
+				<text><![CDATA[Remarks:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="306" y="556" width="207" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SIGNATORY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="305" y="533" width="80" height="15"/>
+				<textElement/>
+				<text><![CDATA[By:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="305" y="513" width="208" height="15"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[COMMISSIONER OF INTERNAL REVENUE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="277" y="571" width="251" height="15"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Head, (National/Regional) Machine Accreditation Board]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="302" y="588" width="226" height="15"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SIGNATORY_POS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="305" y="484" width="80" height="15"/>
+				<textElement/>
+				<text><![CDATA[Very truly yours,]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="23" y="89" width="512" height="57"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["It has been found out that your company has not complied with the policies and procedures set forth under Revenue Regulations (RR) No. "+$P{RR_CODE}+"." + "Thus, the Certificate of Accreditation  Number " +$P{ACCREDITATION_NUMBER}+" dated " +$P{APPROVAL_DATE}+ " for : "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="23" y="370" width="424" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["issued to your company is hereby revoked, effective "+$P{REVOKE_DATE}+"."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="26" y="30" width="99" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sir/Madam:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="26" y="0" width="230" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TIN-BRANCH CODE:  "+$P{TIN}+"-"+$P{BRANCH}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

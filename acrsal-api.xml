@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <import resource="classpath:core/mail.xml" />
+  <import resource="classpath:core/reporting.xml" />
+  <import resource="classpath:core/util.xml" />
+  <import resource="classpath:acrsal-dao.xml" />
+
+  <bean id="birFtpFileConnection" class="com.indracompany.core.util.FTPFileConnection" parent="ftpFileConnection" />
+
+  <bean id="acrsalApiPropertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="locations">
+      <list>
+        <value>classpath:properties/acrsal-api.properties</value>
+      </list>
+    </property>
+    <property name="ignoreUnresolvablePlaceholders" value="true" />
+    <property name="ignoreResourceNotFound" value="true" />
+  </bean>
+
+  <import resource="classpath:spring/notifiers.xml" />
+  <import resource="classpath:spring/general-api.xml" />
+  <import resource="classpath:spring/reporting.xml" />
+  <import resource="classpath:spring/scheduled-jobs.xml" />
+</beans>

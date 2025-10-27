@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+  
+  <bean id="uploadSalesReporJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+    <property name="jobDetail" ref="uploadSalesReportJob" />
+    <property name="cronExpression" value="${acrsal.files.salesuploadschedule}" />
+  </bean>
+
+  <bean id="smsSalesReporJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+    <property name="jobDetail" ref="smsSalesReportJob" />
+    <property name="cronExpression" value="${acrsal.files.salessmsschedule}" />
+  </bean>
+  
+  <bean id="emailSalesReporJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+    <property name="jobDetail" ref="emailSalesReportJob" />
+    <property name="cronExpression" value="${acrsal.files.salesemailschedule}" />
+  </bean>  
+
+  <bean id="uploadSalesReportJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+    <property name="targetBeanName" value="salesReportService" />
+    <property name="targetMethod" value="processUploadFile" />
+    <property name="concurrent" value="false" />
+  </bean>
+
+  <bean id="smsSalesReportJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+    <property name="targetBeanName" value="salesReportService" />
+    <property name="targetMethod" value="processSMSFile" />
+    <property name="concurrent" value="false" />
+  </bean>
+  
+    <bean id="emailSalesReportJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+    <property name="targetBeanName" value="salesReportService" />
+    <property name="targetMethod" value="processEmailAttachment" />
+    <property name="concurrent" value="false" />
+  </bean>
+
+</beans>

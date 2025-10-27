@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ACCREDITATION_CERTIFICATE" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.1000000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="240"/>
+	<property name="ireport.background.image.properties" value="true,true,0.75,18,61,0,77,533,528"/>
+	<style name="table" lineSpacing="Single">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#7500E2" lineSpacing="Single">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#F3E6FF" lineSpacing="Single">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF" lineSpacing="Single">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="BUSINESS_TIN" class="java.lang.String"/>
+	<parameter name="ADDRESS" class="java.lang.String"/>
+	<parameter name="BUSINESS_NAME" class="java.lang.String"/>
+	<parameter name="RDO_CODE" class="java.lang.String"/>
+	<parameter name="HASH_CODE" class="java.lang.String"/>
+	<parameter name="BAR_CODE" class="java.awt.Image"/>
+	<parameter name="SUPPLIER_NAME" class="java.lang.String"/>
+	<parameter name="ACCREDITATION_NO" class="java.lang.String"/>
+	<parameter name="SIGNATORY" class="java.lang.String"/>
+	<parameter name="SIGNATORY_POS" class="java.lang.String"/>
+	<parameter name="DATE_TODAY" class="java.lang.String"/>
+	<parameter name="PRINT_STATUS" class="java.lang.String"/>
+	<parameter name="RR_NUM" class="java.lang.String"/>
+	<parameter name="BRANCH_CODE" class="java.lang.String"/>
+	<parameter name="PRINT_DATE" class="java.lang.String"/>
+	<field name="productType.value" class="java.lang.String"/>
+	<field name="hardware.brand" class="java.lang.String"/>
+	<field name="hardware.model" class="java.lang.String"/>
+	<field name="software.maxSalesCapacity" class="java.math.BigDecimal"/>
+	<field name="software.resetCounterNumber" class="java.lang.String"/>
+	<field name="hardware.features" class="java.lang.String"/>
+	<field name="software.softwareName" class="java.lang.String"/>
+	<field name="software.softwareVersion" class="java.lang.String"/>
+	<field name="software.features" class="java.lang.String"/>
+	<field name="productType.key" class="java.lang.String"/>
+	<field name="software.resetCounterNumberMaximumRange" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="94" y="5" width="412" height="20"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPUBLIC OF THE PHILIPPINES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="19" width="412" height="15"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT OF FINANCE]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="60" y="60" width="480" height="14"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["REVENUE DISTRICT NO.: "+$P{RDO_CODE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="60" y="46" width="480" height="14"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["REVENUE REGION NO.: " + $P{RR_NUM}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="11" y="0" width="69" height="87"/>
+				<imageExpression class="java.lang.String"><![CDATA["images/Picture2.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="94" y="33" width="412" height="15"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUREAU OF INTERNAL REVENUE]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="247" y="0" width="145" height="15"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ACCREDITATION NO :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="247" y="15" width="145" height="15"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATE OF ACCREDITATION :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="392" y="0" width="158" height="15"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ACCREDITATION_NO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="392" y="15" width="157" height="15"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{DATE_TODAY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="570" splitType="Stretch">
+			<image>
+				<reportElement x="38" y="28" width="676" height="479"/>
+				<imageExpression class="java.lang.String"><![CDATA["images/Picture1.jpg"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="94" y="0" width="384" height="28" backcolor="#CCCCCC"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Transparent" x="95" y="0" width="383" height="28"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICATE OF ACCREDITATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="12" y="62" width="91" height="13"/>
+				<textElement lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIN-Branch Code :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="12" y="75" width="104" height="27"/>
+				<textElement lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAME OF SUPPLIER/
+PSEUDO-SUPPLIER :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="12" y="116" width="125" height="13"/>
+				<textElement lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[REGISTERED ADDRESS : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="8" y="148" width="239" height="14"/>
+				<textElement lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TYPE OF MACHINE/SOFTWARE ACCREDITED :]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Transparent" x="11" y="179" width="526" height="14">
+					<printWhenExpression><![CDATA[($F{productType.value}).equals("Cash Register Machine")?Boolean.FALSE:Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement lineSpacing="Single" markup="none">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["DESCRIPTION OF SALES SOFTWARE"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Transparent" x="5" y="407" width="545" height="68"/>
+				<textElement textAlignment="Justified" lineSpacing="Single"/>
+				<text><![CDATA[BY THIS ACCREDITATION, THE COMPANY/FIRM SPECIFIED HEREIN SHALL ABIDE TO THE REQUIREMENTS SET BY THE BUREAU IN THE EXERCISE OF ITS REGULATORY FUNCTION. THAT IN THE EVENT THAT THE ACCREDITED SUPPLIER / PSEUDO-SUPPLIER IS DISCOVERED TO BE IN VIOLATION OF EXISTING RULES AND REGULATIONS SHALL FACE ANY LEGAL SANCTIONS AND PAY CORRESPONDING PENALTIES THEREOF AS PROVIDED FOR UNDER THE NATIONAL INTERNAL REVENUE CODE OF 1997, AS AMENDED.]]></text>
+			</staticText>
+			<line>
+				<reportElement mode="Opaque" x="240" y="523" width="295" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement mode="Transparent" x="240" y="527" width="295" height="34"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Head, (National/Regional) Machine Accreditation Board \n" + $P{SIGNATORY_POS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="table" mode="Transparent" x="271" y="195" width="104" height="42"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MAX ACCUMULATING SALES CAPACITY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="table" mode="Transparent" x="375" y="195" width="71" height="42"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RESET COUNTER NUMBER]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="146" y="62" width="260" height="13"/>
+				<textElement lineSpacing="Single">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{BUSINESS_TIN} + "-" + $P{BRANCH_CODE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="146" y="116" width="348" height="27"/>
+				<textElement lineSpacing="Single">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ADDRESS}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="247" y="148" width="256" height="16"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{productType.value}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+				<reportElement style="table" x="271" y="237" width="104" height="41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{software.maxSalesCapacity}.toString()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="table" x="375" y="237" width="71" height="41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{software.resetCounterNumber}.toString()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="146" y="89" width="268" height="13"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{SUPPLIER_NAME}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="240" y="503" width="300" height="20"/>
+				<textElement textAlignment="Center" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{SIGNATORY}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="5" y="538" width="178" height="20"/>
+				<textElement lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{HASH_CODE}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RealSize" onErrorType="Blank">
+				<reportElement x="5" y="476" width="136" height="50"/>
+				<imageExpression class="java.awt.Image"><![CDATA[$P{BAR_CODE}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Transparent" x="12" y="101" width="95" height="15"/>
+				<textElement lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUSINESS NAME :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="146" y="101" width="374" height="14"/>
+				<textElement lineSpacing="Single">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{BUSINESS_NAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="table" mode="Transparent" x="446" y="195" width="89" height="42"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MAXIMUM RANGE of OR/SALES INVOICE]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="table" x="446" y="237" width="89" height="41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{software.resetCounterNumberMaximumRange}.toString()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="table" mode="Transparent" x="12" y="287" width="523" height="17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FEATURES OF SOFTWARE]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="table" stretchType="RelativeToBandHeight" x="12" y="304" width="523" height="89"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{software.features}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="table" mode="Transparent" x="183" y="195" width="88" height="42"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SOFTWARE VERSION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="table" mode="Transparent" x="12" y="195" width="171" height="42"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SOFTWARE NAME]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+				<reportElement style="table" x="183" y="237" width="88" height="41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[($F{productType.key}.equals("032")) ? " " : "v"+$F{software.softwareVersion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+				<reportElement style="table" x="12" y="237" width="171" height="41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{software.softwareName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="6" y="20" width="104" height="10" forecolor="#999999"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[THIS IS NOT FOR SALE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="10" width="105" height="10" forecolor="#999999"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO SIGNATURE REQUIRED]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="314" y="0" width="226" height="20"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{PRINT_DATE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="6" y="0" width="104" height="20"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{PRINT_STATUS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

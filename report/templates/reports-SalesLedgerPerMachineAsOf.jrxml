@@ -1,0 +1,3286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="listOfLateMonthlySalesReport" pageWidth="1728" pageHeight="612" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="1688" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<property name="ireport.zoom" value="1.3310000000000022"/>
+	<property name="ireport.x" value="6"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="USER_NAME" class="java.lang.String"/>
+	<parameter name="REPORT_AS_OF_DATE" class="java.lang.String"/>
+	<parameter name="TAXPAYER_NAME" class="java.lang.String"/>
+	<parameter name="BUSINESS_TIN" class="java.lang.String"/>
+	<parameter name="BRANCH_CODE" class="java.lang.String"/>
+	<parameter name="RUN_DATE" class="java.lang.String"/>
+	<parameter name="TIME_STAMP" class="java.lang.String"/>
+	<field name="tin" class="java.lang.String"/>
+	<field name="branchCode" class="java.lang.String"/>
+	<field name="taxpayerName" class="java.lang.String"/>
+	<field name="min" class="java.lang.String"/>
+	<field name="permitNo" class="java.lang.String"/>
+	<field name="serialNo" class="java.lang.String"/>
+	<field name="totalVatableSales" class="java.lang.String"/>
+	<field name="totalVatZeroRatedSales" class="java.lang.String"/>
+	<field name="totalVatExempt" class="java.lang.String"/>
+	<field name="totalSubjectToOther" class="java.lang.String"/>
+	<field name="totalSales" class="java.lang.String"/>
+	<field name="srn" class="java.lang.String"/>
+	<field name="JANSalesReport.min" class="java.lang.String"/>
+	<field name="JANSalesReport.vatableSales" class="java.lang.String"/>
+	<field name="JANSalesReport.vatZeroRatedSales" class="java.lang.String"/>
+	<field name="JANSalesReport.vatExempt" class="java.lang.String"/>
+	<field name="JANSalesReport.subjectToOther" class="java.lang.String"/>
+	<field name="JANSalesReport.totalSales" class="java.lang.String"/>
+	<field name="JANSalesReport.submissionDate" class="java.lang.String"/>
+	<field name="FEBSalesReport.min" class="java.lang.String"/>
+	<field name="FEBSalesReport.vatableSales" class="java.lang.String"/>
+	<field name="FEBSalesReport.vatZeroRatedSales" class="java.lang.String"/>
+	<field name="FEBSalesReport.vatExempt" class="java.lang.String"/>
+	<field name="FEBSalesReport.subjectToOther" class="java.lang.String"/>
+	<field name="FEBSalesReport.totalSales" class="java.lang.String"/>
+	<field name="FEBSalesReport.submissionDate" class="java.lang.String"/>
+	<field name="MARSalesReport.min" class="java.lang.String"/>
+	<field name="MARSalesReport.vatableSales" class="java.lang.String"/>
+	<field name="MARSalesReport.vatZeroRatedSales" class="java.lang.String"/>
+	<field name="MARSalesReport.vatExempt" class="java.lang.String"/>
+	<field name="MARSalesReport.subjectToOther" class="java.lang.String"/>
+	<field name="MARSalesReport.totalSales" class="java.lang.String"/>
+	<field name="MARSalesReport.submissionDate" class="java.lang.String"/>
+	<field name="APRSalesReport.min" class="java.lang.String"/>
+	<field name="APRSalesReport.vatableSales" class="java.lang.String"/>
+	<field name="APRSalesReport.vatZeroRatedSales" class="java.lang.String"/>
+	<field name="APRSalesReport.vatExempt" class="java.lang.String"/>
+	<field name="APRSalesReport.subjectToOther" class="java.lang.String"/>
+	<field name="APRSalesReport.totalSales" class="java.lang.String"/>
+	<field name="APRSalesReport.submissionDate" class="java.lang.String"/>
+	<field name="MAYSalesReport.min" class="java.lang.String"/>
+	<field name="MAYSalesReport.vatableSales" class="java.lang.String"/>
+	<field name="MAYSalesReport.vatZeroRatedSales" class="java.lang.String"/>
+	<field name="MAYSalesReport.vatExempt" class="java.lang.String"/>
+	<field name="MAYSalesReport.subjectToOther" class="java.lang.String"/>
+	<field name="MAYSalesReport.totalSales" class="java.lang.String"/>
+	<field name="MAYSalesReport.submissionDate" class="java.lang.String"/>
+	<field name="JUNSalesReport.min" class="java.lang.String"/>
+	<field name="JUNSalesReport.vatableSales" class="java.lang.String"/>
+	<field name="JUNSalesReport.vatZeroRatedSales" class="java.lang.String"/>
+	<field name="JUNSalesReport.vatExempt" class="java.lang.String"/>
+	<field name="JUNSalesReport.subjectToOther" class="java.lang.String"/>
+	<field name="JUNSalesReport.totalSales" class="java.lang.String"/>
+	<field name="JUNSalesReport.submissionDate" class="java.lang.String"/>
+	<field name="JULSalesReport.min" class="java.lang.String"/>
+	<field name="JULSalesReport.vatableSales" class="java.lang.String"/>
+	<field name="JULSalesReport.vatZeroRatedSales" class="java.lang.String"/>
+	<field name="JULSalesReport.vatExempt" class="java.lang.String"/>
+	<field name="JULSalesReport.subjectToOther" class="java.lang.String"/>
+	<field name="JULSalesReport.totalSales" class="java.lang.String"/>
+	<field name="JULSalesReport.submissionDate" class="java.lang.String"/>
+	<field name="AUGSalesReport.min" class="java.lang.String"/>
+	<field name="AUGSalesReport.vatableSales" class="java.lang.String"/>
+	<field name="AUGSalesReport.vatZeroRatedSales" class="java.lang.String"/>
+	<field name="AUGSalesReport.vatExempt" class="java.lang.String"/>
+	<field name="AUGSalesReport.subjectToOther" class="java.lang.String"/>
+	<field name="AUGSalesReport.totalSales" class="java.lang.String"/>
+	<field name="AUGSalesReport.submissionDate" class="java.lang.String"/>
+	<field name="SEPSalesReport.min" class="java.lang.String"/>
+	<field name="SEPSalesReport.vatableSales" class="java.lang.String"/>
+	<field name="SEPSalesReport.vatZeroRatedSales" class="java.lang.String"/>
+	<field name="SEPSalesReport.vatExempt" class="java.lang.String"/>
+	<field name="SEPSalesReport.subjectToOther" class="java.lang.String"/>
+	<field name="SEPSalesReport.totalSales" class="java.lang.String"/>
+	<field name="SEPSalesReport.submissionDate" class="java.lang.String"/>
+	<field name="OCTSalesReport.min" class="java.lang.String"/>
+	<field name="OCTSalesReport.vatableSales" class="java.lang.String"/>
+	<field name="OCTSalesReport.vatZeroRatedSales" class="java.lang.String"/>
+	<field name="OCTSalesReport.vatExempt" class="java.lang.String"/>
+	<field name="OCTSalesReport.subjectToOther" class="java.lang.String"/>
+	<field name="OCTSalesReport.totalSales" class="java.lang.String"/>
+	<field name="OCTSalesReport.submissionDate" class="java.lang.String"/>
+	<field name="NOVSalesReport.min" class="java.lang.String"/>
+	<field name="NOVSalesReport.vatableSales" class="java.lang.String"/>
+	<field name="NOVSalesReport.vatZeroRatedSales" class="java.lang.String"/>
+	<field name="NOVSalesReport.vatExempt" class="java.lang.String"/>
+	<field name="NOVSalesReport.subjectToOther" class="java.lang.String"/>
+	<field name="NOVSalesReport.totalSales" class="java.lang.String"/>
+	<field name="NOVSalesReport.submissionDate" class="java.lang.String"/>
+	<field name="DECSalesReport.min" class="java.lang.String"/>
+	<field name="DECSalesReport.vatableSales" class="java.lang.String"/>
+	<field name="DECSalesReport.vatZeroRatedSales" class="java.lang.String"/>
+	<field name="DECSalesReport.vatExempt" class="java.lang.String"/>
+	<field name="DECSalesReport.subjectToOther" class="java.lang.String"/>
+	<field name="DECSalesReport.totalSales" class="java.lang.String"/>
+	<field name="DECSalesReport.submissionDate" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="brandModel" class="java.lang.String"/>
+	<field name="statusInfo" class="java.lang.String"/>
+	<variable name="totalJANSalesReportVatable" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JANSalesReport.vatableSales} != null &&  $F{JANSalesReport.vatableSales}.length() > 0 ?  Double.valueOf($F{JANSalesReport.vatableSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalFEBSalesReportVatable" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{FEBSalesReport.vatableSales} != null &&  $F{FEBSalesReport.vatableSales}.length() > 0 ?  Double.valueOf($F{FEBSalesReport.vatableSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalMARSalesReportVatable" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{MARSalesReport.vatableSales} != null &&  $F{MARSalesReport.vatableSales}.length() > 0 ?  Double.valueOf($F{MARSalesReport.vatableSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalAPRSalesReportVatable" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{APRSalesReport.vatableSales} != null &&  $F{APRSalesReport.vatableSales}.length() > 0 ?  Double.valueOf($F{APRSalesReport.vatableSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalMAYSalesReportVatable" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{MAYSalesReport.vatableSales} != null &&  $F{MAYSalesReport.vatableSales}.length() > 0 ?  Double.valueOf($F{MAYSalesReport.vatableSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalJUNSalesReportVatable" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JUNSalesReport.vatableSales} != null &&  $F{JUNSalesReport.vatableSales}.length() > 0 ?  Double.valueOf($F{JUNSalesReport.vatableSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalJULSalesReportVatable" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JULSalesReport.vatableSales} != null &&  $F{JULSalesReport.vatableSales}.length() > 0 ?  Double.valueOf($F{JULSalesReport.vatableSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalAUGSalesReportVatable" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{AUGSalesReport.vatableSales} != null &&  $F{AUGSalesReport.vatableSales}.length() > 0 ?  Double.valueOf($F{AUGSalesReport.vatableSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalSEPSalesReportVatable" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{SEPSalesReport.vatableSales} != null &&  $F{SEPSalesReport.vatableSales}.length() > 0 ?  Double.valueOf($F{SEPSalesReport.vatableSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalOCTSalesReportVatable" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{OCTSalesReport.vatableSales} != null &&  $F{OCTSalesReport.vatableSales}.length() > 0 ?  Double.valueOf($F{OCTSalesReport.vatableSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalNOVSalesReportVatable" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{NOVSalesReport.vatableSales} != null &&  $F{NOVSalesReport.vatableSales}.length() > 0 ?  Double.valueOf($F{NOVSalesReport.vatableSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalDECSalesReportVatable" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{DECSalesReport.vatableSales} != null &&  $F{DECSalesReport.vatableSales}.length() > 0 ?  Double.valueOf($F{DECSalesReport.vatableSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalYearSalesReportVatable" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{totalVatableSales} != null &&  $F{totalVatableSales}.length() > 0 ?  Double.valueOf($F{totalVatableSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalJANVatZeroRatedSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JANSalesReport.vatZeroRatedSales} != null &&  $F{JANSalesReport.vatZeroRatedSales}.length() > 0 ?  Double.valueOf($F{JANSalesReport.vatZeroRatedSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalFEBVatZeroRatedSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{FEBSalesReport.vatZeroRatedSales} != null &&  $F{FEBSalesReport.vatZeroRatedSales}.length() > 0 ?  Double.valueOf($F{FEBSalesReport.vatZeroRatedSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalMARVatZeroRatedSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{MARSalesReport.vatZeroRatedSales} != null &&  $F{MARSalesReport.vatZeroRatedSales}.length() > 0 ?  Double.valueOf($F{MARSalesReport.vatZeroRatedSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalAPRVatZeroRatedSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{APRSalesReport.vatZeroRatedSales} != null &&  $F{APRSalesReport.vatZeroRatedSales}.length() > 0 ?  Double.valueOf($F{APRSalesReport.vatZeroRatedSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalMAYVatZeroRatedSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{MAYSalesReport.vatZeroRatedSales} != null &&  $F{MAYSalesReport.vatZeroRatedSales}.length() > 0 ?  Double.valueOf($F{MAYSalesReport.vatZeroRatedSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalJUNVatZeroRatedSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JUNSalesReport.vatZeroRatedSales} != null &&  $F{JUNSalesReport.vatZeroRatedSales}.length() > 0 ?  Double.valueOf($F{JUNSalesReport.vatZeroRatedSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalJULVatZeroRatedSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JULSalesReport.vatZeroRatedSales} != null &&  $F{JULSalesReport.vatZeroRatedSales}.length() > 0 ?  Double.valueOf($F{JULSalesReport.vatZeroRatedSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalAUGVatZeroRatedSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{AUGSalesReport.vatZeroRatedSales} != null &&  $F{AUGSalesReport.vatZeroRatedSales}.length() > 0 ?  Double.valueOf($F{AUGSalesReport.vatZeroRatedSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalSEPVatZeroRatedSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{SEPSalesReport.vatZeroRatedSales} != null &&  $F{SEPSalesReport.vatZeroRatedSales}.length() > 0 ?  Double.valueOf($F{SEPSalesReport.vatZeroRatedSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalOCTVatZeroRatedSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{OCTSalesReport.vatZeroRatedSales} != null &&  $F{OCTSalesReport.vatZeroRatedSales}.length() > 0 ?  Double.valueOf($F{OCTSalesReport.vatZeroRatedSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalNOVVatZeroRatedSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{NOVSalesReport.vatZeroRatedSales} != null &&  $F{NOVSalesReport.vatZeroRatedSales}.length() > 0 ?  Double.valueOf($F{NOVSalesReport.vatZeroRatedSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalDECVatZeroRatedSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{DECSalesReport.vatZeroRatedSales} != null &&  $F{DECSalesReport.vatZeroRatedSales}.length() > 0 ?  Double.valueOf($F{DECSalesReport.vatZeroRatedSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalYearVatZeroRatedSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{totalVatZeroRatedSales} != null &&  $F{totalVatZeroRatedSales}.length() > 0 ?  Double.valueOf($F{totalVatZeroRatedSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalJANSubjectToOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JANSalesReport.subjectToOther} != null &&  $F{JANSalesReport.subjectToOther}.length() > 0 ?  Double.valueOf($F{JANSalesReport.subjectToOther}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalFEBSubjectToOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{FEBSalesReport.subjectToOther} != null &&  $F{FEBSalesReport.subjectToOther}.length() > 0 ?  Double.valueOf($F{FEBSalesReport.subjectToOther}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalMARSubjectToOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{MARSalesReport.subjectToOther} != null &&  $F{MARSalesReport.subjectToOther}.length() > 0 ?  Double.valueOf($F{MARSalesReport.subjectToOther}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalAPRSubjectToOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{APRSalesReport.subjectToOther} != null &&  $F{APRSalesReport.subjectToOther}.length() > 0 ?  Double.valueOf($F{APRSalesReport.subjectToOther}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalMAYSubjectToOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{MAYSalesReport.subjectToOther} != null &&  $F{MAYSalesReport.subjectToOther}.length() > 0 ?  Double.valueOf($F{MAYSalesReport.subjectToOther}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalJUNSubjectToOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JUNSalesReport.subjectToOther} != null &&  $F{JUNSalesReport.subjectToOther}.length() > 0 ?  Double.valueOf($F{JUNSalesReport.subjectToOther}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalJULSubjectToOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JULSalesReport.subjectToOther} != null &&  $F{JULSalesReport.subjectToOther}.length() > 0 ?  Double.valueOf($F{JULSalesReport.subjectToOther}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalAUGSubjectToOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{AUGSalesReport.subjectToOther} != null &&  $F{AUGSalesReport.subjectToOther}.length() > 0 ?  Double.valueOf($F{AUGSalesReport.subjectToOther}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalSEPSubjectToOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{SEPSalesReport.subjectToOther} != null &&  $F{SEPSalesReport.subjectToOther}.length() > 0 ?  Double.valueOf($F{SEPSalesReport.subjectToOther}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalOCTSubjectToOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{OCTSalesReport.subjectToOther} != null &&  $F{OCTSalesReport.subjectToOther}.length() > 0 ?  Double.valueOf($F{OCTSalesReport.subjectToOther}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalNOVSubjectToOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{NOVSalesReport.subjectToOther} != null &&  $F{NOVSalesReport.subjectToOther}.length() > 0 ?  Double.valueOf($F{NOVSalesReport.subjectToOther}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalDECSubjectToOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{DECSalesReport.subjectToOther} != null &&  $F{DECSalesReport.subjectToOther}.length() > 0 ?  Double.valueOf($F{DECSalesReport.subjectToOther}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalYearSubjectToOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{totalSubjectToOther} != null &&  $F{totalSubjectToOther}.length() > 0 ?  Double.valueOf($F{totalSubjectToOther}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalJANVatExempt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JANSalesReport.vatExempt} != null &&  $F{JANSalesReport.vatExempt}.length() > 0 ?  Double.valueOf($F{JANSalesReport.vatExempt}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalFEBVatExempt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{FEBSalesReport.vatExempt} != null &&  $F{FEBSalesReport.vatExempt}.length() > 0 ?  Double.valueOf($F{FEBSalesReport.vatExempt}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalMARVatExempt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{MARSalesReport.vatExempt} != null &&  $F{MARSalesReport.vatExempt}.length() > 0 ?  Double.valueOf($F{MARSalesReport.vatExempt}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalAPRVatExempt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{APRSalesReport.vatExempt} != null &&  $F{APRSalesReport.vatExempt}.length() > 0 ?  Double.valueOf($F{APRSalesReport.vatExempt}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalMAYVatExempt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{MAYSalesReport.vatExempt} != null &&  $F{MAYSalesReport.vatExempt}.length() > 0 ?  Double.valueOf($F{MAYSalesReport.vatExempt}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalJUNVatExempt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JUNSalesReport.vatExempt} != null &&  $F{JUNSalesReport.vatExempt}.length() > 0 ?  Double.valueOf($F{JUNSalesReport.vatExempt}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalJULVatExempt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JULSalesReport.vatExempt} != null &&  $F{JULSalesReport.vatExempt}.length() > 0 ?  Double.valueOf($F{JULSalesReport.vatExempt}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalAUGVatExempt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{AUGSalesReport.vatExempt} != null &&  $F{AUGSalesReport.vatExempt}.length() > 0 ?  Double.valueOf($F{AUGSalesReport.vatExempt}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalSEPVatExempt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{SEPSalesReport.vatExempt} != null &&  $F{SEPSalesReport.vatExempt}.length() > 0 ?  Double.valueOf($F{SEPSalesReport.vatExempt}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalOCTVatExempt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{OCTSalesReport.vatExempt} != null &&  $F{OCTSalesReport.vatExempt}.length() > 0 ?  Double.valueOf($F{OCTSalesReport.vatExempt}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalNOVVatExempt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{NOVSalesReport.vatExempt} != null &&  $F{NOVSalesReport.vatExempt}.length() > 0 ?  Double.valueOf($F{NOVSalesReport.vatExempt}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalDECVatExempt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{DECSalesReport.vatExempt} != null &&  $F{DECSalesReport.vatExempt}.length() > 0 ?  Double.valueOf($F{DECSalesReport.vatExempt}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalJANTotalSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JANSalesReport.totalSales} != null &&  $F{JANSalesReport.totalSales}.length() > 0 ?  Double.valueOf($F{JANSalesReport.totalSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalFEBTotalSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{FEBSalesReport.totalSales} != null &&  $F{FEBSalesReport.totalSales}.length() > 0 ?  Double.valueOf($F{FEBSalesReport.totalSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalMARTotalSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{MARSalesReport.totalSales} != null &&  $F{MARSalesReport.totalSales}.length() > 0 ?  Double.valueOf($F{MARSalesReport.totalSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalAPRTotalSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{APRSalesReport.totalSales} != null &&  $F{APRSalesReport.totalSales}.length() > 0 ?  Double.valueOf($F{APRSalesReport.totalSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalMAYTotalSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{MAYSalesReport.totalSales} != null &&  $F{MAYSalesReport.totalSales}.length() > 0 ?  Double.valueOf($F{MAYSalesReport.totalSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalJUNTotalSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JUNSalesReport.totalSales} != null &&  $F{JUNSalesReport.totalSales}.length() > 0 ?  Double.valueOf($F{JUNSalesReport.totalSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalJULTotalSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{JULSalesReport.totalSales} != null &&  $F{JULSalesReport.totalSales}.length() > 0 ?  Double.valueOf($F{JULSalesReport.totalSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalAUGTotalSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{AUGSalesReport.totalSales} != null &&  $F{AUGSalesReport.totalSales}.length() > 0 ?  Double.valueOf($F{AUGSalesReport.totalSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalSEPTotalSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{SEPSalesReport.totalSales} != null &&  $F{SEPSalesReport.totalSales}.length() > 0 ?  Double.valueOf($F{SEPSalesReport.totalSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalOCTTotalSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{OCTSalesReport.totalSales} != null &&  $F{OCTSalesReport.totalSales}.length() > 0 ?  Double.valueOf($F{OCTSalesReport.totalSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalNOVTotalSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{NOVSalesReport.totalSales} != null &&  $F{NOVSalesReport.totalSales}.length() > 0 ?  Double.valueOf($F{NOVSalesReport.totalSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalDECTotalSales" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{DECSalesReport.totalSales} != null &&  $F{DECSalesReport.totalSales}.length() > 0 ?  Double.valueOf($F{DECSalesReport.totalSales}) : new Double(0)]]></variableExpression>
+	</variable>
+	<variable name="totalYearVatExempt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{totalVatExempt} != null &&  $F{totalVatExempt}.length() > 0 ?  Double.valueOf($F{totalVatExempt}) : new Double(0)]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement  x="0" y="0" width="688" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monthly Breakdown of Sales per Machine]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="0" y="54" width="688" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BUSINESS_TIN} + "-" + $P{BRANCH_CODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="0" y="20" width="1326" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["For the Month/s of :"  + $P{REPORT_AS_OF_DATE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="0" y="40" width="688" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$P{TAXPAYER_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement  mode="Opaque" x="0" y="21" width="50" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BRANCH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="50" y="21" width="155" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ADDRESS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="205" y="21" width="127" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERMIT NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="332" y="21" width="102" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BRAND/MODEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="434" y="21" width="113" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SERIAL NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="688" y="21" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="547" y="21" width="141" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="753" y="21" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FEB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="818" y="21" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="883" y="21" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[APR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="948" y="21" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MAY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="1013" y="21" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="1143" y="21" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[AUG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="1208" y="21" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="1273" y="21" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[OCT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="1338" y="21" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOV]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="1403" y="21" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="1078" y="21" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUL]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="0" y="0" width="332" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["Run date:" + $P{RUN_DATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  mode="Opaque" x="688" y="0" width="780" height="21" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[AMOUNT of SALES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="1468" y="0" width="105" height="61" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL SALES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="1573" y="0" width="115" height="61" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[STATUS
+(if cancelled,
+include date of
+cancellation)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="75" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement  x="0" y="0" width="50" height="75"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{branchCode}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="50" y="0" width="155" height="75"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  mode="Opaque" x="547" y="30" width="141" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[VAT Zero- rated Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="547" y="60" width="141" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[VAT Exempt Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="547" y="45" width="141" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Sales Subject to other percentage taxes]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="688" y="15" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JANSalesReport.vatableSales} == null ? "-" :new java.text.DecimalFormat("#,##0.00").format(new Double($F{JANSalesReport.vatableSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="688" y="30" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JANSalesReport.vatZeroRatedSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{JANSalesReport.vatZeroRatedSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="688" y="60" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JANSalesReport.vatExempt} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{JANSalesReport.vatExempt}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="688" y="45" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JANSalesReport.subjectToOther} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{JANSalesReport.subjectToOther}))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  mode="Opaque" x="547" y="15" width="141" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[VATable]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1468" y="0" width="105" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{totalSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{totalSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1573" y="0" width="115" height="75"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{statusInfo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="332" y="0" width="102" height="75"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{brandModel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1468" y="15" width="105" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalVatableSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{totalVatableSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1468" y="30" width="105" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalVatZeroRatedSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{totalVatZeroRatedSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1468" y="45" width="105" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalSubjectToOther} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{totalSubjectToOther}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1468" y="60" width="105" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalVatExempt} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{totalVatExempt}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="753" y="30" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FEBSalesReport.vatZeroRatedSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{FEBSalesReport.vatZeroRatedSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="753" y="15" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FEBSalesReport.vatableSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{FEBSalesReport.vatableSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="753" y="0" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{FEBSalesReport.totalSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{FEBSalesReport.totalSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="753" y="60" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FEBSalesReport.vatExempt} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{FEBSalesReport.vatExempt}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="753" y="45" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FEBSalesReport.subjectToOther} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{FEBSalesReport.subjectToOther}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="818" y="60" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MARSalesReport.vatExempt} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{MARSalesReport.vatExempt}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="818" y="0" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{MARSalesReport.totalSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{MARSalesReport.totalSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="818" y="30" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MARSalesReport.vatZeroRatedSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{MARSalesReport.vatZeroRatedSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="818" y="45" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MARSalesReport.subjectToOther} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{MARSalesReport.subjectToOther}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="818" y="15" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MARSalesReport.vatableSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{MARSalesReport.vatableSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="883" y="30" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APRSalesReport.vatableSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{APRSalesReport.vatableSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="883" y="15" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APRSalesReport.vatableSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{APRSalesReport.vatableSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="948" y="60" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MAYSalesReport.vatExempt} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{MAYSalesReport.vatExempt}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1013" y="30" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JUNSalesReport.vatZeroRatedSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{JUNSalesReport.vatZeroRatedSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="883" y="0" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{APRSalesReport.totalSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{APRSalesReport.totalSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="883" y="60" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APRSalesReport.vatExempt} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{APRSalesReport.vatExempt}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="948" y="0" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{MAYSalesReport.totalSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{MAYSalesReport.totalSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="948" y="30" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MAYSalesReport.vatZeroRatedSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{MAYSalesReport.vatZeroRatedSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1013" y="60" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JUNSalesReport.vatExempt} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{JUNSalesReport.vatExempt}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1013" y="0" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{JUNSalesReport.totalSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{JUNSalesReport.totalSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1013" y="45" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JUNSalesReport.subjectToOther} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{JUNSalesReport.subjectToOther}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="883" y="45" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APRSalesReport.subjectToOther} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{APRSalesReport.subjectToOther}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="948" y="45" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MAYSalesReport.subjectToOther} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{MAYSalesReport.subjectToOther}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1013" y="15" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JUNSalesReport.vatableSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{JUNSalesReport.vatableSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="948" y="15" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MAYSalesReport.vatableSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{MAYSalesReport.vatableSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1078" y="45" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JULSalesReport.subjectToOther} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{JULSalesReport.subjectToOther}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1078" y="30" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JULSalesReport.vatZeroRatedSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{JULSalesReport.vatZeroRatedSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1078" y="15" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JULSalesReport.vatableSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{JULSalesReport.vatableSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1078" y="60" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JULSalesReport.vatExempt} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{JULSalesReport.vatExempt}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1078" y="0" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{JULSalesReport.totalSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{JULSalesReport.totalSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1143" y="60" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AUGSalesReport.vatExempt} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{AUGSalesReport.vatExempt}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1143" y="45" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AUGSalesReport.subjectToOther} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{AUGSalesReport.subjectToOther}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1143" y="0" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{AUGSalesReport.totalSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{AUGSalesReport.totalSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1143" y="15" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AUGSalesReport.vatableSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{AUGSalesReport.vatableSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1143" y="30" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AUGSalesReport.vatZeroRatedSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{AUGSalesReport.vatZeroRatedSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1208" y="60" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SEPSalesReport.vatExempt} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{SEPSalesReport.vatExempt}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1208" y="30" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SEPSalesReport.vatZeroRatedSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{SEPSalesReport.vatZeroRatedSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1208" y="15" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SEPSalesReport.vatableSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{SEPSalesReport.vatableSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1208" y="45" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SEPSalesReport.subjectToOther} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{SEPSalesReport.subjectToOther}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1208" y="0" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{SEPSalesReport.totalSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{SEPSalesReport.totalSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1273" y="60" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OCTSalesReport.vatExempt} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{OCTSalesReport.vatExempt}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1273" y="45" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OCTSalesReport.subjectToOther} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{OCTSalesReport.subjectToOther}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1273" y="30" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OCTSalesReport.vatZeroRatedSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{OCTSalesReport.vatZeroRatedSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1273" y="0" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{OCTSalesReport.totalSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{OCTSalesReport.totalSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1273" y="15" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OCTSalesReport.vatableSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{OCTSalesReport.vatableSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1338" y="60" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOVSalesReport.vatExempt} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{NOVSalesReport.vatExempt}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1338" y="0" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{NOVSalesReport.totalSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{NOVSalesReport.totalSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1338" y="45" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOVSalesReport.subjectToOther} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{NOVSalesReport.subjectToOther}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1338" y="15" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOVSalesReport.vatableSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{NOVSalesReport.vatableSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1338" y="30" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOVSalesReport.vatZeroRatedSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{NOVSalesReport.vatZeroRatedSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1403" y="0" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DECSalesReport.totalSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{DECSalesReport.totalSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1403" y="30" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DECSalesReport.vatZeroRatedSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{DECSalesReport.vatZeroRatedSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1403" y="15" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DECSalesReport.vatableSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{DECSalesReport.vatableSales}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1403" y="60" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DECSalesReport.vatExempt} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{DECSalesReport.vatExempt}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="1403" y="45" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DECSalesReport.subjectToOther} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{DECSalesReport.subjectToOther}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="434" y="0" width="113" height="75"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{serialNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="205" y="0" width="127" height="75"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{permitNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="547" y="0" width="141" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{min}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement  x="688" y="0" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{JANSalesReport.totalSales} == null ? "-" : new java.text.DecimalFormat("#,##0.00").format(new Double($F{JANSalesReport.totalSales}))]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement  x="1403" y="0" width="285" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Generated By: "+$P{USER_NAME}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement  mode="Transparent" x="1573" y="40" width="115" height="20"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="1468" y="41" width="105" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="1468" y="20" width="220" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{TIME_STAMP}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="147" splitType="Stretch">
+			<staticText>
+				<reportElement  mode="Opaque" x="612" y="28" width="82" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="1468" y="7" width="220" height="61" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[GRAND TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="140" y="7" width="1328" height="21" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALES SUMMARY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="547" y="28" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MAY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="883" y="28" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[AUG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="270" y="28" width="62" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="1143" y="28" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[OCT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="1273" y="28" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="482" y="28" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[APR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="140" y="28" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="818" y="28" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="948" y="28" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="205" y="28" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FEB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="1208" y="28" width="65" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOV]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="0" y="68" width="140" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[VATable]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="0" y="83" width="140" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[VAT Zero- rated Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="0" y="98" width="140" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Sales Subject to other percentage taxes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="0" y="113" width="140" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[VAT Exempt Sales]]></text>
+			</staticText>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="270" y="68" width="62" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalMARSalesReportVatable})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="818" y="68" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJULSalesReportVatable})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="482" y="68" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalAPRSalesReportVatable})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1208" y="68" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalNOVSalesReportVatable})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="948" y="68" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalSEPSalesReportVatable})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="140" y="68" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJANSalesReportVatable})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="612" y="68" width="82" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJUNSalesReportVatable})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToBandHeight" x="1468" y="68" width="220" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(
+    Double.valueOf(
+        $V{totalJANSalesReportVatable}.doubleValue() + $V{totalFEBSalesReportVatable}.doubleValue() + $V{totalMARSalesReportVatable}.doubleValue() +
+        $V{totalAPRSalesReportVatable}.doubleValue() + $V{totalMAYSalesReportVatable}.doubleValue() + $V{totalJUNSalesReportVatable}.doubleValue() +
+        $V{totalJULSalesReportVatable}.doubleValue() + $V{totalAUGSalesReportVatable}.doubleValue() + $V{totalSEPSalesReportVatable}.doubleValue() +
+        $V{totalOCTSalesReportVatable}.doubleValue() + $V{totalNOVSalesReportVatable}.doubleValue() + $V{totalDECSalesReportVatable}.doubleValue()
+        ))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1273" y="68" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalDECSalesReportVatable})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="547" y="68" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalMAYSalesReportVatable})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1143" y="68" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalOCTSalesReportVatable})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="883" y="68" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalAUGSalesReportVatable})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="205" y="68" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalFEBSalesReportVatable})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="883" y="83" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalAUGVatZeroRatedSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="205" y="83" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalFEBVatZeroRatedSales})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToBandHeight" x="1468" y="83" width="220" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(
+    Double.valueOf(
+        $V{totalJANVatZeroRatedSales}.doubleValue() + $V{totalFEBVatZeroRatedSales}.doubleValue() + $V{totalMARVatZeroRatedSales}.doubleValue() +
+        $V{totalAPRVatZeroRatedSales}.doubleValue() + $V{totalMAYVatZeroRatedSales}.doubleValue() + $V{totalJUNVatZeroRatedSales}.doubleValue() +
+        $V{totalJULVatZeroRatedSales}.doubleValue() + $V{totalAUGVatZeroRatedSales}.doubleValue() + $V{totalSEPVatZeroRatedSales}.doubleValue() +
+        $V{totalOCTVatZeroRatedSales}.doubleValue() + $V{totalNOVVatZeroRatedSales}.doubleValue() + $V{totalDECVatZeroRatedSales}.doubleValue()
+        ))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="482" y="83" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalAPRVatZeroRatedSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="948" y="83" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalSEPVatZeroRatedSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1208" y="83" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalNOVVatZeroRatedSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="547" y="83" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalMAYVatZeroRatedSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="612" y="83" width="82" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJUNVatZeroRatedSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="818" y="83" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJULVatZeroRatedSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1143" y="83" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalOCTVatZeroRatedSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="140" y="83" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJANVatZeroRatedSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1273" y="83" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalDECVatZeroRatedSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="270" y="83" width="62" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalMARVatZeroRatedSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="883" y="98" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalAUGSubjectToOther})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="205" y="98" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalFEBSubjectToOther})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToBandHeight" x="1468" y="98" width="220" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(
+    Double.valueOf(
+        $V{totalJANSubjectToOther}.doubleValue() + $V{totalFEBSubjectToOther}.doubleValue() + $V{totalMARSubjectToOther}.doubleValue() +
+        $V{totalAPRSubjectToOther}.doubleValue() + $V{totalMAYSubjectToOther}.doubleValue() + $V{totalJUNSubjectToOther}.doubleValue() +
+        $V{totalJULSubjectToOther}.doubleValue() + $V{totalAUGSubjectToOther}.doubleValue() + $V{totalSEPSubjectToOther}.doubleValue() +
+        $V{totalOCTSubjectToOther}.doubleValue() + $V{totalNOVSubjectToOther}.doubleValue() + $V{totalDECSubjectToOther}.doubleValue()
+        ))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="482" y="98" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalAPRSubjectToOther})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="948" y="98" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalSEPSubjectToOther})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1208" y="98" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalNOVSubjectToOther})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="547" y="98" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalMAYSubjectToOther})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="612" y="98" width="82" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJUNSubjectToOther})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="818" y="98" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJULSubjectToOther})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1143" y="98" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalOCTSubjectToOther})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="140" y="98" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJANSubjectToOther})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1273" y="98" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalDECSubjectToOther})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="270" y="98" width="62" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalMARSubjectToOther})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="883" y="113" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalAUGVatExempt})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="205" y="113" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalFEBVatExempt})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToBandHeight" x="1468" y="113" width="220" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(
+    Double.valueOf(
+        $V{totalJANVatExempt}.doubleValue() + $V{totalFEBVatExempt}.doubleValue() + $V{totalMARVatExempt}.doubleValue() +
+        $V{totalAPRVatExempt}.doubleValue() + $V{totalMAYVatExempt}.doubleValue() + $V{totalJUNVatExempt}.doubleValue() +
+        $V{totalJULVatExempt}.doubleValue() + $V{totalAUGVatExempt}.doubleValue() + $V{totalSEPVatExempt}.doubleValue() +
+        $V{totalOCTVatExempt}.doubleValue() + $V{totalNOVVatExempt}.doubleValue() + $V{totalDECVatExempt}.doubleValue()
+        ))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="482" y="113" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalAPRVatExempt})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="948" y="113" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalSEPVatExempt})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1208" y="113" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalNOVVatExempt})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="547" y="113" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalMAYVatExempt})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="612" y="113" width="82" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJUNVatExempt})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="818" y="113" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJULVatExempt})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1143" y="113" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalOCTVatExempt})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="140" y="113" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJANVatExempt})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1273" y="113" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalDECVatExempt})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="270" y="113" width="62" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalMARVatExempt})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  mode="Opaque" x="0" y="128" width="140" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="140" y="128" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJANTotalSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="205" y="128" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalFEBTotalSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="547" y="128" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalMAYTotalSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="270" y="128" width="62" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalMARTotalSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="948" y="128" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalSEPTotalSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="883" y="128" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalAUGTotalSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1143" y="128" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalOCTTotalSales})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  stretchType="RelativeToBandHeight" x="1468" y="128" width="220" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(
+    Double.valueOf(
+        $V{totalJANTotalSales}.doubleValue() + $V{totalFEBTotalSales}.doubleValue() + $V{totalMARTotalSales}.doubleValue() +
+        $V{totalAPRTotalSales}.doubleValue() + $V{totalMAYTotalSales}.doubleValue() + $V{totalJUNTotalSales}.doubleValue() +
+        $V{totalJULTotalSales}.doubleValue() + $V{totalAUGTotalSales}.doubleValue() + $V{totalSEPTotalSales}.doubleValue() +
+        $V{totalOCTTotalSales}.doubleValue() + $V{totalNOVTotalSales}.doubleValue() + $V{totalDECTotalSales}.doubleValue()
+        ))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1273" y="128" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalDECTotalSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="818" y="128" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJULTotalSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1208" y="128" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalNOVTotalSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="482" y="128" width="65" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalAPRTotalSales})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="332" y="98" width="150" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(new Double($V{totalJANSubjectToOther}.doubleValue()
+     + $V{totalFEBSubjectToOther}.doubleValue()
+     + $V{totalMARSubjectToOther}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  mode="Opaque" x="332" y="28" width="150" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[First Quarter]]></text>
+			</staticText>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="332" y="113" width="150" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(new Double($V{totalJANVatExempt}.doubleValue()
+     + $V{totalFEBVatExempt}.doubleValue()
+     + $V{totalMARVatExempt}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="332" y="68" width="150" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(new Double($V{totalJANSalesReportVatable}.doubleValue()
+     + $V{totalFEBSalesReportVatable}.doubleValue()
+     + $V{totalMARSalesReportVatable}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="332" y="83" width="150" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(new Double($V{totalJANVatZeroRatedSales}.doubleValue()
+     + $V{totalFEBVatZeroRatedSales}.doubleValue()
+     + $V{totalMARVatZeroRatedSales}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="694" y="98" width="124" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(new Double($V{totalAPRSubjectToOther}.doubleValue()
+     + $V{totalMAYSubjectToOther}.doubleValue()
+     + $V{totalJUNSubjectToOther}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="694" y="83" width="124" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(new Double($V{totalAPRVatZeroRatedSales}.doubleValue()
+     + $V{totalMAYVatZeroRatedSales}.doubleValue()
+     + $V{totalJUNVatZeroRatedSales}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="694" y="113" width="124" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(new Double($V{totalAPRVatExempt}.doubleValue()
+     + $V{totalMAYVatExempt}.doubleValue()
+     + $V{totalJUNVatExempt}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="694" y="68" width="124" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(new Double($V{totalAPRSalesReportVatable}.doubleValue()
+     + $V{totalMAYSalesReportVatable}.doubleValue()
+     + $V{totalJUNSalesReportVatable}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  mode="Opaque" x="694" y="28" width="124" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Second Quarter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="1013" y="28" width="130" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Third Quarter]]></text>
+			</staticText>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1013" y="68" width="130" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(Double.valueOf($V{totalJULSalesReportVatable}.doubleValue()
+     + $V{totalAUGSalesReportVatable}.doubleValue()
+     + $V{totalSEPSalesReportVatable}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1013" y="83" width="130" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(Double.valueOf($V{totalJULVatZeroRatedSales}.doubleValue()
+     + $V{totalAUGVatZeroRatedSales}.doubleValue()
+     + $V{totalSEPVatZeroRatedSales}.doubleValue() ))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1013" y="113" width="130" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(Double.valueOf($V{totalJULVatExempt}.doubleValue()
+     + $V{totalAUGVatExempt}.doubleValue()
+     + $V{totalSEPVatExempt}.doubleValue()     ))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1013" y="98" width="130" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(Double.valueOf($V{totalJULSubjectToOther}.doubleValue()
+     + $V{totalAUGSubjectToOther}.doubleValue()
+     + $V{totalSEPSubjectToOther}.doubleValue()    ))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  mode="Opaque" x="1338" y="28" width="130" height="40" forecolor="#FFFFFF" backcolor="#006AB0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fourth Quarter]]></text>
+			</staticText>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1338" y="98" width="130" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(Double.valueOf(($V{totalOCTSubjectToOther}.doubleValue()
+     + $V{totalNOVSubjectToOther}.doubleValue()
+     + $V{totalDECSubjectToOther}.doubleValue()     )))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1338" y="83" width="130" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(Double.valueOf(($V{totalOCTVatZeroRatedSales}.doubleValue()
+     + $V{totalNOVVatZeroRatedSales}.doubleValue()
+     + $V{totalDECVatZeroRatedSales}.doubleValue()     )))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1338" y="113" width="130" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(Double.valueOf(($V{totalOCTVatExempt}.doubleValue()
+     + $V{totalNOVVatExempt}.doubleValue()
+     + $V{totalDECVatExempt}.doubleValue()     )))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1338" y="68" width="130" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(Double.valueOf(($V{totalOCTSalesReportVatable}.doubleValue()
+     + $V{totalNOVSalesReportVatable}.doubleValue()
+     + $V{totalDECSalesReportVatable}.doubleValue()    )))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="332" y="128" width="150" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(
+    Double.valueOf($V{totalJANTotalSales}.doubleValue() +
+            $V{totalFEBTotalSales}.doubleValue() +
+            $V{totalMARTotalSales}.doubleValue()) )]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="694" y="128" width="124" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(
+    Double.valueOf($V{totalAPRTotalSales}.doubleValue() +
+            $V{totalMAYTotalSales}.doubleValue() +
+            $V{totalJUNTotalSales}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1013" y="128" width="130" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(
+    Double.valueOf($V{totalJULTotalSales}.doubleValue() +
+            $V{totalAUGTotalSales}.doubleValue() +
+            $V{totalSEPTotalSales}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="1338" y="128" width="130" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(
+    Double.valueOf($V{totalOCTTotalSales}.doubleValue() +
+            $V{totalNOVTotalSales}.doubleValue() +
+            $V{totalDECTotalSales}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement  x="612" y="128" width="82" height="15"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($V{totalJUNTotalSales})]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

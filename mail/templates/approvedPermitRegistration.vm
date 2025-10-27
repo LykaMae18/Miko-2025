@@ -1,0 +1,35 @@
+Application for Registration/Permit to Use Approved
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Application for Registration/Permit to Use Approved</title>
+  </head>
+  <body>
+  	<p>
+  		Hi Mr./Ms. <b>$authorizedName</b>,
+  		
+  		<br> <br>
+  		
+  		Your application for Permit to Use Sales Machines or Special Purpose Machine (which ever is applicable) 
+  		in behalf of $taxpayerName with transaction number 
+  		 <b> $transNum </b> has been approved . <br> To generate the permit, kindly log on to the BIR eAccReg website.
+    	
+    	<br> <br>
+    	 
+    	Please be reminded that printing of the original copy of the Permit to Use (PTU) may be done only once. 
+    	In case of loss or damaged permits, kindly contact your RDO to request for a copy of the original permit.
+    	
+    	<br> <br>
+    	
+    	Thank you.
+    	
+		<br> <br>
+		For inquiries and other related concerns, please contact your respective Revenue District Office (RDO), Large Taxpayer District Office (LTDO), Large Taxpayers Assistance Division (LTAD), or Large Taxpayer - Excise Tax Regulatory Division (LT-ETRD): http://www.bir.gov.ph/directory/rdo.htm, 
+		<br>or you may also reach BIR at http://www.bir.gov.ph/, 
+		<br>or thru our Customer Assistance Division (CAD) at Telephone No: 981-8888, 
+		<br>or e-mail at contact_us@cctr.bir.gov.ph		
+		<br> <br>
+    </p>
+  </body>
+</html>

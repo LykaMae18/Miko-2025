@@ -1,0 +1,45 @@
+Registration/Permit to Use Cancelled
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Registration/Permit to Use Cancelled</title>
+  </head>
+  <body>
+  	<p>
+  		Hi Mr./Ms. <b>$authorizedName</b>,
+  		
+  		<br> <br>
+  		
+  		Your application for Permit to Use the following machines has/have been cancelled. <br><br>
+  		<table border="1">
+		<thead>
+		<tr>
+			<th>Permit No</th>		
+			<th>MIN</th>		
+			<th>Machine Details</th>
+		</tr>
+		</thead>
+		<tbody>	
+		<tr>
+			<td>$permitNo</td>
+			<td>$min</td>
+			<td>$machine.brand / $machine.model / $machine.serialNo</td>
+		</tr>
+		</tbody>
+  		</table> 
+  		<br>You may claim the letter of cancellation from the RDO where your machine(s) was/were registered.
+    	 
+    	<br> <br>
+    	
+    	Thank you.
+    	
+		<br> <br>
+		For inquiries and other related concerns, please contact your respective Revenue District Office (RDO), Large Taxpayer District Office (LTDO), Large Taxpayers Assistance Division (LTAD), or Large Taxpayer - Excise Tax Regulatory Division (LT-ETRD): http://www.bir.gov.ph/directory/rdo.htm, 
+		<br>or you may also reach BIR at http://www.bir.gov.ph/, 
+		<br>or thru our Customer Assistance Division (CAD) at Telephone No: 981-8888, 
+		<br>or e-mail at contact_us@cctr.bir.gov.ph		
+		<br> <br>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="registration-OSM-New" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<property name="ireport.zoom" value="0.9090909090909167"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CURRENT_DATE" class="java.lang.String"/>
+	<parameter name="TRANS_NO" class="java.lang.String"/>
+	<parameter name="APP_STATUS" class="java.lang.String"/>
+	<parameter name="PERMIT_TYPE" class="java.lang.String"/>
+	<parameter name="BUSINESS_TIN" class="java.lang.String"/>
+	<parameter name="BRANCH_CD" class="java.lang.String"/>
+	<parameter name="RDO_CD" class="java.lang.String"/>
+	<parameter name="BUSINESS_TYPE" class="java.lang.String"/>
+	<parameter name="BUSINESS_ADDRESS" class="java.lang.String"/>
+	<parameter name="FIRST_NAME" class="java.lang.String"/>
+	<parameter name="MIDDLE_NAME" class="java.lang.String"/>
+	<parameter name="LAST_NAME" class="java.lang.String"/>
+	<parameter name="REG_NAME" class="java.lang.String"/>
+	<parameter name="parameter5" class="java.lang.String"/>
+	<parameter name="parameter1" class="java.lang.String"/>
+	<parameter name="EXTENTION_NAME" class="java.lang.String"/>
+	<parameter name="parameter2" class="java.lang.String"/>
+	<parameter name="MACHINE_SIZE" class="java.lang.String"/>
+	<parameter name="parameter3" class="java.lang.String"/>
+	<parameter name="parameter6" class="java.lang.String"/>
+	<parameter name="ACCRED_NO" class="java.lang.String"/>
+	<parameter name="BUSINESS_STATIC" class="java.lang.String"/>
+	<parameter name="BUSINESS_NAME" class="java.lang.String"/>
+	<parameter name="SOFTWARE_NAME_STATIC" class="java.lang.String"/>
+	<parameter name="SOFTWARE_VERSION_STATIC" class="java.lang.String"/>
+	<parameter name="SOFTWARE_NAME" class="java.lang.String"/>
+	<parameter name="SOFTWARE_VERSION" class="java.lang.String"/>
+	<parameter name="SOFTWARE_DETAILS" class="java.lang.String"/>
+	<parameter name="USER_NAME" class="java.lang.String"/>
+	<field name="serialNumber" class="java.lang.String"/>
+	<field name="brand" class="java.lang.String"/>
+	<field name="model" class="java.lang.String"/>
+	<field name="presentReading" class="java.lang.String"/>
+	<field name="dateOfReading" class="java.lang.String"/>
+	<field name="lastOR" class="java.lang.String"/>
+	<field name="lastCashInvoice" class="java.lang.String"/>
+	<field name="lastChargeInvoice" class="java.lang.String"/>
+	<field name="lastTransaction" class="java.lang.String"/>
+	<field name="roving" class="java.lang.String"/>
+	<field name="osmTypeLabel" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="364" splitType="Stretch">
+			<image>
+				<reportElement  x="105" y="0" width="144" height="84"/>
+				<imageExpression><![CDATA["images/Picture2.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement  x="225" y="0" width="801" height="364"/>
+				<imageExpression><![CDATA["images/Picture1.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement  x="0" y="202" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Permit Type:]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="105" y="287" width="148" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BUSINESS_TIN} + " - " + $P{BRANCH_CD}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  mode="Transparent" x="105" y="325" width="652" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BUSINESS_NAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="135" width="100" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Transaction Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="74" width="802" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Application for Registration of Sales Machines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="10" width="802" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPUBLIC OF THE PHILIPPINES]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="105" y="268" width="148" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RDO_CD}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="29" width="802" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT OF FINANCE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="48" width="802" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUREAU OF INTERNAL REVENUE]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="105" y="154" width="149" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TRANS_NO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="344" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Business Address:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="268" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[RDO Code:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="183" width="100" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Permit Details]]></text>
+			</staticText>
+			<textField>
+				<reportElement  x="105" y="202" width="147" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PERMIT_TYPE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="105" y="107" width="149" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CURRENT_DATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="0" y="249" width="100" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Business Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="154" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Transaction Number:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  stretchType="RelativeToTallestObject" mode="Transparent" x="0" y="325" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Business Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="287" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[TIN-Branch Code:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="107" width="100" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date Submitted]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="105" y="221" width="147" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[POS > Other Sales Machines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="0" y="221" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Machine Setup: ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement  x="105" y="344" width="652" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BUSINESS_ADDRESS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="0" y="306" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{BUSINESS_TYPE}.equals("Individual"))?
+"Owner Name :":"Registered Name :"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement  mode="Transparent" x="105" y="306" width="652" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{BUSINESS_TYPE}.equals("Individual"))?
+$P{FIRST_NAME}+' '+
+$P{MIDDLE_NAME}+' '+
+$P{LAST_NAME}+' '+
+$P{EXTENTION_NAME}
+:$P{REG_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement  mode="Opaque" x="0" y="5" width="65" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[OSM Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="263" y="5" width="50" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Serial Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="313" y="5" width="60" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Brand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="373" y="5" width="60" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Model]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="433" y="5" width="37" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Present Reading]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="470" y="5" width="48" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Date Of
+Reading]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="518" y="5" width="40" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Last OR
+Issued]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="558" y="5" width="60" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Last Cash
+Invoice Issued]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="618" y="5" width="60" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Last Charge
+Invoice Issued]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="678" y="5" width="67" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Last Transaction
+Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="745" y="5" width="29" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Roving]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="65" y="5" width="50" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Software Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="115" y="5" width="50" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Software Version]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="165" y="5" width="98" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Accreditation Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="445" y="35" width="50" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Date Of
+Reading]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="545" y="35" width="65" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Last Cash
+Invoice Issued]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="742" y="35" width="30" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Roving]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="340" y="35" width="65" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Model]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="610" y="35" width="65" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Last Charge
+Invoice Issued]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="0" y="35" width="90" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[OSM Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="90" y="35" width="65" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Software Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="155" y="35" width="60" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Software Version]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="405" y="35" width="40" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Present Reading]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="495" y="35" width="50" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Last OR
+Issued]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="675" y="35" width="67" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Last Transaction
+Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="215" y="35" width="60" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Serial Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="275" y="35" width="65" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Brand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="772" y="35" width="30" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  mode="Opaque" x="774" y="5" width="28" height="30" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="0" y="0" width="65" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{osmTypeLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="263" y="0" width="50" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{serialNumber}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="313" y="0" width="60" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{brand}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="373" y="0" width="60" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{model}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="433" y="0" width="37" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{presentReading}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="470" y="0" width="48" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateOfReading}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="518" y="0" width="40" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastOR}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="558" y="0" width="60" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastCashInvoice}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="618" y="0" width="60" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastChargeInvoice}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" mode="Transparent" x="678" y="0" width="67" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastTransaction}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="165" y="0" width="98" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ACCRED_NO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="745" y="0" width="29" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{roving}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="65" y="0" width="50" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SOFTWARE_NAME}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="115" y="0" width="50" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SOFTWARE_VERSION}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="774" y="0" width="28" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{APP_STATUS}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="30">
+			<printWhenExpression><![CDATA[( ($P{ACCRED_NO}).equals("") && $P{PERMIT_TYPE}.equals("Provisional Permit") ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="340" y="0" width="65" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{model}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="495" y="0" width="50" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastOR}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="405" y="0" width="40" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{presentReading}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{osmTypeLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="742" y="0" width="30" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{roving}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="545" y="0" width="65" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastCashInvoice}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="215" y="0" width="60" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{serialNumber}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" mode="Transparent" x="675" y="0" width="67" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastTransaction}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="90" y="0" width="65" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SOFTWARE_NAME}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="275" y="0" width="65" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{brand}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="445" y="0" width="50" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateOfReading}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="610" y="0" width="65" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastChargeInvoice}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="155" y="0" width="60" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SOFTWARE_VERSION}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  stretchType="RelativeToTallestObject" x="772" y="0" width="30" height="30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{APP_STATUS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement  x="566" y="5" width="236" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Generated by : " + $P{USER_NAME} + "  " + $P{CURRENT_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

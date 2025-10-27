@@ -1,0 +1,58 @@
+Revocation of Accreditation
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Revocation of Accreditation</title>
+  </head>
+  <body>
+  	<p>
+  		Hi <b>$userName </b>,
+  		
+  		<br> <br> 
+  		
+  		This is to inform you that the following software and/or machine accreditation/s which was issued to 
+  		<b>$taxpayerRegisteredName</b> has been revoked:
+  		
+  		<br> <br>
+  		
+		<table border="1">
+		<thead>
+		<tr>
+			<th>Accreditation Number</th>
+			<th>SW Name,Version OR Brand,Model</th>
+			<th>Reason for Revocation</th>
+		</tr>
+		</thead>
+		<tbody>		
+		
+		#foreach( $accreditation in $accreditationList )
+		<tr>
+			<td>$accreditation.accreditationNo</td>
+			<td>$accreditation.remarks</td>
+			<td>$accreditation.revokeReason.value</td>
+		 </tr>
+		 #end
+		 
+		</tbody>
+		</table>
+  		
+  		
+  		<br> <br>
+  		
+  		You may claim the letter of revocation from your RDO.
+  		
+    	<br> <br> 
+    	
+    	Thank you.
+    	
+		<br> <br>
+		For inquiries and other related concerns, please contact your respective Revenue District Office (RDO), Large Taxpayer District Office (LTDO), Large Taxpayers Assistance Division (LTAD), or Large Taxpayer - Excise Tax Regulatory Division (LT-ETRD): http://www.bir.gov.ph/directory/rdo.htm, 
+		<br>or you may also reach BIR at http://www.bir.gov.ph/, 
+		<br>or thru our Customer Assistance Division (CAD) at Telephone No: 981-8888, 
+		<br>or e-mail at contact_us@cctr.bir.gov.ph		
+		<br> <br>
+    </p>
+  
+  </body>
+</html>

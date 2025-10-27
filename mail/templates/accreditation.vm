@@ -1,0 +1,34 @@
+Application for Accreditation New
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Application for Accreditation $status</title>
+  </head>
+  <body>
+  	<p>
+  		Hi Mr./Ms. <b>$authorizedName</b>,
+  		
+  		<br> <br> 
+  		
+  		$message1 $taxpayerName $message2 <br>
+  		$message3<b> $transNo </b>
+  		
+  		<br> <br>
+  		
+  		$message4
+  		
+    	<br> <br> 
+    	
+    	Thank you.
+    	
+		<br> <br>
+		For inquiries and other related concerns, please contact your respective Revenue District Office (RDO), Large Taxpayer District Office (LTDO), Large Taxpayers Assistance Division (LTAD), or Large Taxpayer - Excise Tax Regulatory Division (LT-ETRD): http://www.bir.gov.ph/directory/rdo.htm, 
+		<br>or you may also reach BIR at http://www.bir.gov.ph/, 
+		<br>or thru our Customer Assistance Division (CAD) at Telephone No: 981-8888, 
+		<br>or e-mail at contact_us@cctr.bir.gov.ph		
+		<br> <br>
+    </p>
+  
+  </body>
+</html>

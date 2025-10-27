@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="permit-provisional-pos-serverConsolidator" columnCount="2" printOrder="Horizontal" pageWidth="612" pageHeight="792" columnWidth="288" columnSpacing="18" leftMargin="9" rightMargin="9" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1"/>
+	<parameter name="HASH_CODE" class="java.lang.String"/>
+	<parameter name="BAR_CODE" class="java.awt.Image"/>
+	<parameter name="OFFICE" class="java.lang.String"/>
+	<parameter name="PRINT_STATUS" class="java.lang.String"/>
+	<parameter name="RR_CODE" class="java.lang.String"/>
+	<field name="rr_code" class="java.lang.String"/>
+	<field name="rdo_code" class="java.lang.String"/>
+	<field name="taxpayerName" class="java.lang.String"/>
+	<field name="branch.address" class="java.lang.String"/>
+	<field name="business.businessTIN" class="java.lang.String"/>
+	<field name="permit.effectiveDateOfPermit" class="java.util.Date"/>
+	<field name="server.machineTitle.value" class="java.lang.String"/>
+	<field name="server.brand" class="java.lang.String"/>
+	<field name="server.model" class="java.lang.String"/>
+	<field name="server.serialNo" class="java.lang.String"/>
+	<field name="server.roving" class="java.lang.String"/>
+	<field name="permit.softwareName" class="java.lang.String"/>
+	<field name="permit.softwareVersion" class="java.lang.String"/>
+	<field name="permit.accredCode" class="java.lang.String"/>
+	<field name="terminal.machineTitle.value" class="java.lang.String"/>
+	<field name="terminal.brand" class="java.lang.String"/>
+	<field name="terminal.model" class="java.lang.String"/>
+	<field name="terminal.roving" class="java.lang.String"/>
+	<field name="terminal.serialNo" class="java.lang.String"/>
+	<field name="signatory" class="java.lang.String"/>
+	<field name="signatory_pos" class="java.lang.String"/>
+	<field name="serverConsolidator.machineTitle.value" class="java.lang.String"/>
+	<field name="serverConsolidator.brand" class="java.lang.String"/>
+	<field name="serverConsolidator.model" class="java.lang.String"/>
+	<field name="serverConsolidator.roving" class="java.lang.String"/>
+	<field name="serverConsolidator.serialNo" class="java.lang.String"/>
+	<field name="terminal.machineId" class="java.lang.String"/>
+	<field name="permit.permitCode" class="java.lang.String"/>
+	<field name="branch.branchCode" class="java.lang.String"/>
+	<field name="rr_desc" class="java.lang.String"/>
+	<field name="rdo_desc" class="java.lang.String"/>
+	<detail>
+		<band height="389" splitType="Stretch">
+			<rectangle>
+				<reportElement x="143" y="66" width="8" height="8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="143" y="58" width="8" height="8"/>
+			</rectangle>
+			<image>
+				<reportElement x="3" y="2" width="70" height="36"/>
+				<imageExpression class="java.lang.String"><![CDATA["images/Picture2.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="5" y="74" width="275" height="12"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROVISIONAL PERMIT TO USE SALES MACHINE]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="5" y="39" width="275" height="10"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Revenue District Office No. " + $F{rdo_code} + "-" + $F{rdo_desc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="65" width="50" height="10"/>
+				<textElement lineSpacing="Single">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{OFFICE}.equals("BRANCH")) ?" X" : " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="5" width="275" height="10"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPUBLIC OF THE PHILIPPINES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="49" width="275" height="10"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OFFICE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="143" y="57" width="50" height="10"/>
+				<textElement lineSpacing="Single">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{OFFICE}.equals("HEAD OFFICE")) ?" X" : " "]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="5" y="31" width="275" height="10"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Revenue Region No. " + $P{RR_CODE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="92" y="57" width="50" height="10"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Head Office]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="65" width="50" height="10"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Branch]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="21" width="275" height="10"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUREAU OF INTERNAL REVENUE]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement x="39" y="98" width="200" height="200"/>
+				<imageExpression class="java.lang.String"><![CDATA["images/Picture1.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="341" width="96" height="10" forecolor="#999999"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO SIGNATURE REQUIRED]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="329" width="120" height="10"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{signatory}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement x="38" y="303" width="35" height="20"/>
+				<imageExpression class="java.awt.Image"><![CDATA[$P{BAR_CODE}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="350" width="96" height="10" forecolor="#999999"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOT FOR SALE]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="5" y="333" width="96" height="10"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{PRINT_STATUS}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="5" y="321" width="96" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" lineSpacing="Single">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{HASH_CODE}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="159" y="339" width="120" height="1"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="340" width="120" height="19"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{signatory_pos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="86" width="275" height="71"/>
+				<textElement textAlignment="Justified" lineSpacing="Single">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Permit is hereby granted to " + $F{taxpayerName} + ",  of " + $F{branch.address} + ", with TIN " + ($F{business.businessTIN}).substring(0,3)+"-"+($F{business.businessTIN}).substring(3,6)+"-"+($F{business.businessTIN}).substring(6,9)+"-"+$F{branch.branchCode}  + ", effective "  + new SimpleDateFormat("MMMM dd, yyyy").format($F{permit.effectiveDateOfPermit}) + " , to use the sales machine and/or software with Approved Accreditaion No. " + $F{permit.accredCode} + ", pursuant to the provisions of the National Internal Revenue Code, as implemented by Revenue Regulations No. 11-2004 and other related issuances."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="272" width="275" height="30"/>
+				<textElement textAlignment="Justified" lineSpacing="Single">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[	Any revision thereof shall be subject to  automatic revocation of the above Pemit to Use and shall be subject to penalties and sanction pursuant to the Tax Reform Act of 1997.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="93" y="166" width="100" height="15" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[[Machine Details [Brand / Model / Serial Number]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="193" y="232" width="86" height="15" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[Permit Number]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="193" y="247" width="86" height="24"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{permit.permitCode}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="5" y="181" width="88" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{serverConsolidator.machineTitle.value} + ($F{server.roving} == null ? "" : "\n" + $F{server.roving})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="5" y="201" width="88" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($F{server.machineTitle.value}.isEmpty() ? "" : ($F{server.machineTitle.value}.equalsIgnoreCase("POS-Server") ? "Back-up Server" : $F{server.machineTitle.value})) + ($F{server.roving} == null ? "" : "\n" + $F{server.roving})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="232" width="88" height="15" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[[Machine Details [Brand / Model / Serial Number]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="193" y="166" width="86" height="15" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[Software Details [Name / Version]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="93" y="232" width="100" height="15" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[Machine Identification Number]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="193" y="201" width="86" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="222" width="275" height="10"/>
+				<textElement lineSpacing="Single">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[POS MACHINE DETAILS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="166" width="88" height="15" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[Type of Sales Machine]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="93" y="247" width="100" height="24"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{terminal.machineId}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="93" y="181" width="100" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{serverConsolidator.brand}+" / "+$F{serverConsolidator.model}+" / "+$F{serverConsolidator.serialNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="5" y="247" width="88" height="24"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{terminal.brand}+" / "+$F{terminal.model}+" / "+$F{terminal.serialNo} + " " + ($F{terminal.roving} == null ? "" : "\n" + $F{terminal.roving})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="93" y="201" width="100" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{server.brand}+" / "+$F{server.model}+" / "+$F{server.serialNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="193" y="181" width="86" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{permit.softwareName}+" v"+$F{permit.softwareVersion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="156" width="275" height="10"/>
+				<textElement lineSpacing="Single">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[POS-SERVER DETAILS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="13" width="275" height="10"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT OF FINANCE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="287" y="1" width="1" height="350"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="2" y="360" width="283" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

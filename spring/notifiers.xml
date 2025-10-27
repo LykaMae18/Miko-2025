@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <bean id="changePasswordMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/changePassword" />
+  </bean>
+
+  <bean id="enrollmentMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/enrollment" />
+  </bean>
+
+  <bean id="accountApprovalMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/accountApproval" />
+  </bean>
+
+  <bean id="accountActivateDeactivate" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/accountActivateDeactivate" />
+  </bean>
+
+  <bean id="accountOnholdMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/accountOnhold" />
+  </bean>
+
+  <bean id="accountRejectedMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/accountRejected" />
+  </bean>
+
+  <bean id="forgotPasswordMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/forgotPassword" />
+  </bean>
+
+  <bean id="accreditationMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/accreditation" />
+  </bean>
+  
+  <bean id="accreditationApprovalMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/accreditationApproval" />
+  </bean>
+  
+  <bean id="accreditationDenialMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/accreditationDenial" />
+  </bean>
+  
+  <bean id="revokeAccreditationMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/revokeAccreditation" />
+  </bean>
+
+  <bean id="permitRegistrationMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/permitRegistration" />
+  </bean>
+
+  <bean id="salesUploadMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/salesReportUpload" />
+  </bean>
+  
+  <bean id="approvedPermitRegistrationMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/approvedPermitRegistration" />
+  </bean>
+  
+  <bean id="deniedPermitRegistrationMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/deniedPermitRegistration" />
+  </bean>
+  
+  <bean id="cancellationOfPermitMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/cancellationOfPermit" />
+  </bean>
+  
+  <bean id="conversionToFinalOfPermitMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/convertPermitRegistration" />
+  </bean>
+
+  <bean id="salesReportUploadInvalidEmailMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/salesReportUploadInvalidEmail" />
+  </bean>
+
+  <bean id="permitForUploadRegistrationMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/permitForUploadedRegistration" />
+  </bean>
+
+  <bean id="salesMailReceiver" class="com.indracompany.core.mail.receiver.impl.ImapMailReceiver" parent="mailReceiver" />
+
+  <bean id="sysadUserDetailsMailer" class="com.indracompany.core.mail.mailer.impl.MimeTemplateMailer" parent="mimeMailerBase">
+    <property name="templateName" value="${mail.velocity.templates.dir}/sysadUserDetails" />
+  </bean>
+</beans>

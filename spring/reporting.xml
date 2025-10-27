@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+
+  <bean id="letterOfDenialReportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="letterOfDenial.jrxml" />
+    <property name="reportFilename" value="letterOfDenial" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+
+  <bean id="accreditationSOExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="accreditation-SO.jrxml" />
+    <property name="reportFilename" value="applicationForAccreditation" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="accreditationCRMExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="accreditation-CRM.jrxml" />
+    <property name="reportFilename" value="applicationForAccreditation" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="accreditationPOSExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="accreditation-POSandOTHERS.jrxml" />
+    <property name="reportFilename" value="applicationForAccreditation" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="accreditationCertificateGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="accreditationCertificate.jrxml" />
+    <property name="reportFilename" value="applicationForAccreditation" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+  
+  <bean id="accreditationCertificateGeneratorSO" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="accreditationCertificate-SO.jrxml" />
+    <property name="reportFilename" value="applicationForAccreditation" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="letterOfRevocationReportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="accreditation-LetterOfRevocation.jrxml" />
+    <property name="reportFilename" value="accreditation-LetterOfRevocation" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="registrationCRMExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="registration-CRM.jrxml" />
+    <property name="reportFilename" value="registration-CRM" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="registrationOSMExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="registration-OSM.jrxml" />
+    <property name="reportFilename" value="registration-OSM" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="registrationSPMExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="registration-SPM.jrxml" />
+    <property name="reportFilename" value="registration-SPM" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="reportsAmendedSalesGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="reports-ListOfAmendedSales.jrxml" />
+    <property name="reportFilename" value="reports-AmendedSales-" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="reportsLateMonthlySalesGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="reports-ListOfLateMonthlySales.jrxml" />
+    <property name="reportFilename" value="reports-LateMonthlySales-" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="reportsNoMonthlySalesGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="reports-ListOfMachinesNoMonthlySales.jrxml" />
+    <property name="reportFilename" value="reports-NoMonthlySales-" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="reportsZeroMonthlySalesGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="reports-ListOfMachinesZeroMonthlySales.jrxml" />
+    <property name="reportFilename" value="reports-ZeroMonthlySales-" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="reportsMonthlySalesGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="reports-MonthlySales.jrxml" />
+    <property name="reportFilename" value="reports-MonthlySales-" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="registrationPOSStandAloneExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="registration-POS-SA.jrxml" />
+    <property name="reportFilename" value="registration-POS-SA" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="reportsListOfMachineWithFinalPermit" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="reports-ListOfMachineWithFinalPermit.jrxml" />
+    <property name="reportFilename" value="reports-ListOfMachineWithFinalPermit" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="registrationPOSConnectedExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="registration-POS-CS.jrxml" />
+    <property name="reportFilename" value="registration-POS-CS" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="registrationLetterOfCancellationGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="letterOfCancellation.jrxml" />
+    <property name="reportFilename" value="letter-of-cancellation" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="reportsMachineRegistrationPerRDOGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="reports-MachineRegistrationPerRDO.jrxml" />
+    <property name="reportFilename" value="reports-machine-registration" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="reportsMachineWithProvisionalPermitGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="reports-machineWithProvisionalPermit.jrxml" />
+    <property name="reportFilename" value="reports-machine-with-provisional-permit" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="reportsAccreditedSoftwarePerSupplierGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="reports-AccreditedSoftwarePerSupplier.jrxml" />
+    <property name="reportFilename" value="reports-AccreditedSoftwarePerSupplier" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="reportsRegisteredSpecialPurposeMachinesGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="reports-ListOfSpecialPurposeMachines.jrxml" />
+    <property name="reportFilename" value="reports-registered-SPM" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="reportsSalesLedgerGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="reports-SalesLedgerPerMachineAsOf.jrxml" />
+    <property name="reportFilename" value="reports-SalesLedgerPerMachineAsOf" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="reportsRegisteredMachinesConvertedToFinalGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="reports-RegisteredMachinesConvertedToFinal.jrxml" />
+    <property name="reportFilename" value="reports-registered-converted-to-final" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="reportsMachinesWithCancelledMINGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="reports-ListOfMachinesWithCancelledMIN.jrxml" />
+    <property name="reportFilename" value="reports-ListOfMachinesWithCancelledMIN" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="permitFinalCRMGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="permit-final-crm.jrxml" />
+    <property name="reportFilename" value="permit-final-crm" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="permitProvisionalCRMGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="permit-provisional-crm.jrxml" />
+    <property name="reportFilename" value="permit-provisional-crm" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="permitFinalOSMGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="permit-final-osm.jrxml" />
+    <property name="reportFilename" value="permit-final-osm" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="permitProvisionalOSMGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="permit-provisional-osm.jrxml" />
+    <property name="reportFilename" value="permit-provisional-osm" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="permitSPMGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="permit-spm.jrxml" />
+    <property name="reportFilename" value="permit-spm" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="permitFinalPOSDecentralized" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="permit-final-pos-decentralized.jrxml" />
+    <property name="reportFilename" value="permit-final-pos-decentralized" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+  <bean id="permitFinalPOSGlobal" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="permit-final-pos-global.jrxml" />
+    <property name="reportFilename" value="permit-final-pos-global" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+  <bean id="permitFinalPOSServerCons" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="permit-final-pos-serverConsolidator.jrxml" />
+    <property name="reportFilename" value="permit-final-pos-serverConsolidator" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+  <bean id="permitFinalPOSStandAlone" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="permit-final-pos-standAlone.jrxml" />
+    <property name="reportFilename" value="permit-final-pos-standAlone" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="permitProvisionalPOSDecentralized" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="permit-provisional-pos-decentralized.jrxml" />
+    <property name="reportFilename" value="permit-provisional-pos-decentralized" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+  <bean id="permitProvisionalPOSGlobal" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="permit-provisional-pos-global.jrxml" />
+    <property name="reportFilename" value="permit-provisional-pos-global" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+  <bean id="permitProvisionalPOSServerCons" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="permit-provisional-pos-serverConsolidator.jrxml" />
+    <property name="reportFilename" value="permit-provisional-pos-serverConsolidator" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+  <bean id="permitProvisionalPOSStandAlone" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="permit-provisional-pos-standAlone.jrxml" />
+    <property name="reportFilename" value="permit-provisional-pos-standAlone" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="uploadedCRMRegistrationExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="registration-multiple-CRM.jrxml" />
+    <property name="reportFilename" value="registration-multiple-CRM" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="uploadedOSMRegistrationExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="registration-multiple-OSM.jrxml" />
+    <property name="reportFilename" value="registration-multiple-OSM" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="uploadedSPMRegistrationExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="registration-multiple-SPM.jrxml" />
+    <property name="reportFilename" value="registration-multiple-SPM" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="uploadedPOSSARegistrationExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="registration-multiple-POS-SA.jrxml" />
+    <property name="reportFilename" value="registration-multiple-POS-SA" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="uploadedPOSWTRegistrationExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="registration-multiple-POS-SC.jrxml" />
+    <property name="reportFilename" value="registration-multiple-POS-SC" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="reportsUserAccessGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="user-access-search-result.jrxml" />
+    <property name="reportFilename" value="user-access-search-result" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="birUserDetailExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="sysad-BIRUserInfoDetails.jrxml" />
+    <property name="reportFilename" value="sysad-BIRUserInfoDetails" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+
+  <bean id="passwordResetExportGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="user-password-reset-listing.jrxml" />
+    <property name="reportFilename" value="PasswordResetUserListing" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+  
+  <bean id="letterOfRevocationReportCRMGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="accreditation-LetterOfRevocation-crm.jrxml" />
+    <property name="reportFilename" value="accreditation-LetterOfRevocation-crm" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+  
+  <bean id="letterOfRevocationReportPOSandOthersGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="accreditation-LetterOfRevocation-pos-and-others.jrxml" />
+    <property name="reportFilename" value="accreditation-LetterOfRevocation-pos-and-others" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+  
+  <bean id="letterOfRevocationReportSoftwareGenerator" class="com.indracompany.core.reporting.impl.JasperReportGenerator" parent="reportGeneratorBase">
+    <property name="reportTemplateName" value="accreditation-LetterOfRevocation-software.jrxml" />
+    <property name="reportFilename" value="accreditation-LetterOfRevocation-software" />
+    <property name="reportFormat" value="PDF" />
+  </bean>
+</beans>

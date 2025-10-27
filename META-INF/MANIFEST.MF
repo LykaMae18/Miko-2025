@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Hudson-Project: Build-ACRSAL-trunk
+Implementation-Title: acrsal-api
+Implementation-Version: 1.6.0-SNAPSHOT
+Built-By: admin
+Hudson-Version: 1.573
+Created-By: Indra Philippines
+Jenkins-Build-Number: 1446
+Jenkins-Version: 1.573
+SVN-Revision: 4289
+Build-Jdk: 1.6.0_34
+Jenkins-Project: Build-ACRSAL-trunk
+Hudson-Build-Number: 1446
+Comments: All Service Interface and Implementation are in this project
+Archiver-Version: Plexus Archiver
+
